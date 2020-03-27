@@ -50,8 +50,6 @@ public class ParserHandler {
         this.translation = new StringBuffer();
         this.errorList = new ArrayList<>();
         numberOfLine = 1;
-
-        //prova Matteo da IntelliJ 27-3-20
     }
 
     /**
@@ -194,3 +192,4 @@ public class ParserHandler {
         }
     }
 }
+// Prova Matteo IntelliJ
