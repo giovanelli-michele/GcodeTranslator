@@ -25,4 +25,4 @@ hs_err_pid*
 # IntelliJ folders
 .DS_Store
 .idea
-.out
+out
