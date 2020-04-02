@@ -7,4 +7,4 @@
 7:*** SINTAX ERROR [1] in (8, 0) - Found G01 ('G1') - missing WS at 'G1'
 8:*** SINTAX ERROR [1] in (9, 0) - Found G00 ('G00') - missing WS at 'G00'
 9:*** SINTAX ERROR [1] in (10, 0) - Found G00 ('G00') - missing WS at 'G00'
-10:*** SINTAX ERROR [1] in (12, 1) - Found  ('<EOF>') - mismatched input '<EOF>' expecting WS
+10:*** SINTAX ERROR [1] in (10, 20) - Found  ('<EOF>') - mismatched input '<EOF>' expecting WS
