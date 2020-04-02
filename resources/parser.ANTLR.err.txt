@@ -1,0 +1,10 @@
+1:*** SINTAX ERROR [1] in (2, 0) - Found G95 ('G95') - missing WS at 'G95'
+2:*** SINTAX ERROR [1] in (3, 0) - Found G97 ('G97') - missing WS at 'G97'
+3:*** SINTAX ERROR [1] in (4, 0) - Found G00 ('G00') - missing WS at 'G00'
+4:*** SINTAX ERROR [1] in (5, 0) - Found G01 ('G01') - missing WS at 'G01'
+5:*** SINTAX ERROR [1] in (6, 0) - Found G00 ('G0') - missing WS at 'G0'
+6:*** SINTAX ERROR [1] in (7, 0) - Found G00 ('G00') - missing WS at 'G00'
+7:*** SINTAX ERROR [1] in (8, 0) - Found G01 ('G1') - missing WS at 'G1'
+8:*** SINTAX ERROR [1] in (9, 0) - Found G00 ('G00') - missing WS at 'G00'
+9:*** SINTAX ERROR [1] in (10, 0) - Found G00 ('G00') - missing WS at 'G00'
+10:*** SINTAX ERROR [1] in (12, 1) - Found  ('<EOF>') - mismatched input '<EOF>' expecting WS

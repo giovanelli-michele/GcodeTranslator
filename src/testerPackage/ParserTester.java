@@ -46,6 +46,7 @@ public class ParserTester {
             fOut.close();
         }
         else {
+            System.out.println (parser.getTranslation());
             System.out.println ("Parsing completato con " + parser.getErrors().size() + " errori\n\n");
             fOut = new FileWriter (fileErr);
             for (int i=0; i<parser.getErrors().size(); i++) {

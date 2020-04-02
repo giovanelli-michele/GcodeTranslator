@@ -33,6 +33,11 @@ public class ParserHandler {
     public final int ERR_UNAUTHORIZED_TOOL_OP = 13;
 
     /**
+     * Codice errore semantico istruzione G non riconosciuta
+     * Non verrà mai sollevato
+     */
+    public final int ERR_UNKNOWN_G_INSTRUCTION = 14;
+    /**
      * translation è messo nel file di output
      */
     public StringBuffer translation;
@@ -87,6 +92,8 @@ public class ParserHandler {
             msg += "Change tool requested but no tool specified";
         else if (code == ERR_UNAUTHORIZED_TOOL_OP)
             msg += "Tool [" + tk.getText().substring(1,2) + ", "  + tk.getText().substring(3,4) + "] specified without change request";
+        else if (code == ERR_UNKNOWN_G_INSTRUCTION)
+            msg += "G Instruction [" + tk.getText() + "] not defined";
         else
             msg += "Undefined error for token <" + tk.getText() + ">";
 
@@ -115,7 +122,7 @@ public class ParserHandler {
                     break;
                 case "04":
                 case "4":
-                    translation.append("\tTool anticlockwise rotation\n");
+                    translation.append("\tTool counterclockwise rotation\n");
                     break;
                 case "05":
                 case "5":
@@ -151,8 +158,8 @@ public class ParserHandler {
             if (mNumericInstruction.equals("06") || mNumericInstruction.equals("6")) {
                 String tool = tInstr.getText();
                 String tNumericInstruction = tool.substring(1);
-                String position = tNumericInstruction.substring(0,1);
-                String configuration = tNumericInstruction.substring(2,3);
+                String position = tNumericInstruction.substring(0,2);
+                String configuration = tNumericInstruction.substring(2,4);
 
                 translation.append("\tChange tool with the one at position " + position + " with configuration " + configuration + "\n");
             } else {
@@ -190,5 +197,123 @@ public class ParserHandler {
             String fNumericInstruction = tool.substring(1);
             translation.append("\tFeed rate value  = " + fNumericInstruction + "\n");
         }
+    }
+
+    public void evaluateG0G1(Token g00, Token g01, Token x, Token y, Token z) {
+        String message = "";
+        if (g00 != null) {
+            // supponiamo che in questo caso g01 sia null, e che non abbiamo controlli da fare perché ci pensa il Parser
+            message += "\tRapid positioning to [";
+        } else if (g01 != null) {
+            message += "\tLinear interpolation positioning to [";
+        }
+
+        // Ora concateniamo le coordinate presenti
+        if (x != null) {
+            message +=  "x=" + x.getText().substring(1) + ", ";
+        }
+        if (y != null) {
+            message += "y=" + y.getText().substring(1) + ", ";
+        }
+        if (z != null) {
+            message += "z=" + z.getText().substring(1) + ", ";
+        }
+
+        int len = message.length();
+        translation.append(message.substring(0, len - 2) + "]\n");
+
+    }
+
+    public void evaluateG2G3(Token g02, Token g03, Token x, Token y, Token z, Token i, Token j, Token k) {
+        String message = "";
+        if (g02 != null) {
+            // supponiamo che in questo caso g01 sia null, e che non abbiamo controlli da fare perché ci pensa il Parser
+            message += "\tCircular clockwise interpolation to [";
+        } else if (g03 != null) {
+            message += "\tCircular counterclockwise interpolation to [";
+        }
+
+        // Ora concateniamo le coordinate presenti
+        // [x=12, y=23, z=56]
+        if (x != null) {
+            message += "x=" + x.getText().substring(1) + ", ";
+        }
+        if (y != null) {
+            message += "y=" + y.getText().substring(1) + ", ";
+        }
+        if (z != null) {
+            message += "z=" + z.getText().substring(1) + ", ";
+        }
+
+        // eliminiamo l'ultima seqenza ', '
+        int len = message.length();
+        message = message.substring(0, len - 3);
+
+        message += "] with center in [";
+
+        if (i != null) {
+            message += "x=" + i.getText().substring(1) + ", ";
+        }
+        if (j != null) {
+            message += "y=" + j.getText().substring(1) + ", ";
+        }
+        if (k != null) {
+            message += "z=" + k.getText().substring(1) + ", ";
+        }
+
+        len = message.length();
+
+        translation.append(message.substring(0, len - 3) + "]\n");
+
+    }
+
+    public void evaluateOtherG(Token otherG) {
+
+        if (otherG == null) {
+            // In teoria non dovrebbe mai succedere
+            return;
+        }
+
+        String command = otherG.getText().substring(1); // codice
+
+        switch (command) {
+            case "40":
+                translation.append("\tTool radius compensation disabled\n");
+                break;
+            case "41":
+                translation.append("\tTool radius compensation left\n");
+                break;
+            case "42":
+                translation.append("\tTool radius compensation right\n");
+                break;
+            case "90":
+                translation.append("\tAbsolute programming\n");
+                break;
+            case "91":
+                translation.append("\tIncremental programming\n");
+                break;
+            case "94":
+                translation.append("\tMeasure unit for feed rate instruction set to [mm/min]\n");
+                break;
+            case "95":
+                translation.append("\tMeasure unit for feed rate instruction set to [mm/rev]\n");
+                break;
+            case "96":
+                translation.append("\tMeasure unit for speed rate instruction set to [m/min]\n");
+                break;
+            case "97":
+                translation.append("\tMeasure unit for speed rate instruction set to [rev/min]\n");
+                break;
+            default:
+                // G instruction not defined
+                translation.append("\tG Instruction [" + otherG.getText() + "] not defined\n");
+                addErrorMessage(otherG, ERR_UNKNOWN_G_INSTRUCTION);
+        }
+    }
+
+    public void evaluateG0G1(Token g00, Token g01, Token token, Token token1, Token token2, Token token3, Token token4, Token token5, Token token6, Token token7, Token token8, Token token9, Token token10, Token token11, Token token12, Token token13, Token token14) {
+        System.out.println(token.getText());
+        System.out.println(token1.getText());
+        System.out.println(token2.getText());
     }
 }
