@@ -1,5 +1,6 @@
 package compilerPackage.util;
 
+import org.antlr.runtime.NoViableAltException;
 import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.Token;
 
@@ -34,9 +35,15 @@ public class ParserHandler {
 
     /**
      * Codice errore semantico istruzione G non riconosciuta
-     * Non verrà mai sollevato
      */
     public final int ERR_UNKNOWN_G_INSTRUCTION = 14;
+
+    /**
+     * Codice errore semantico istruzione M non riconosciuta
+     */
+    public final int ERR_UNKNOWN_M_INSTRUCTION = 15;
+
+
     /**
      * translation è messo nel file di output
      */
@@ -86,14 +93,15 @@ public class ParserHandler {
             // TODO
             msg += "La variabile <" + tk.getText() + "> è già stata dichiarata";
         else if (code == ERR_UNDEFINED_OP)
-            // TODO
-            msg += "La variabile <" + tk.getText() + "> non è stata dichiarata";
+            msg += "The operation <" + tk.getText() + "> hasn't been identified and won't be handled";
         else if (code == ERR_UNAUTHORIZED_TOOL_CHANGE_OP)
             msg += "Change tool requested but no tool specified";
         else if (code == ERR_UNAUTHORIZED_TOOL_OP)
             msg += "Tool [" + tk.getText().substring(1,2) + ", "  + tk.getText().substring(3,4) + "] specified without change request";
         else if (code == ERR_UNKNOWN_G_INSTRUCTION)
-            msg += "G Instruction [" + tk.getText() + "] not defined";
+            msg += "G Instruction [" + tk.getText() + "] hasn't been identified and won't be handled";
+        else if (code == ERR_UNKNOWN_M_INSTRUCTION)
+            msg += "M Instruction [" + tk.getText() + "] hasn't been identified and won't be handled";
         else
             msg += "Undefined error for token <" + tk.getText() + ">";
 
@@ -101,11 +109,41 @@ public class ParserHandler {
     }
 
     public void newLine() {
-        translation.append(numberOfLine.toString() + ")");
+        /*if (translation.length() > 0) {
+            if (!translation.substring(translation.length() - 1).equals(")")) {
+                translation.append(numberOfLine.toString() + ")\n");
+            } else {
+                System.out.println("Mi Vedi???");
+                translation.append(numberOfLine.toString() + ")");
+            }
+        } else {
+            translation.append(numberOfLine.toString() + ")\n");
+        }*/
+        translation.append(numberOfLine.toString() + ")\n");
         numberOfLine++;
+
+    }
+
+    /**
+     * Questo metodo ci permette diimpaginare in modo corretto l'output rispettando la formattazione desiderata
+     */
+    private void checkTranslationFormat() {
+        // cancellare i \n
+        if (translation.substring(translation.length() - 2).equals(")\n")) {
+            translation.deleteCharAt(translation.length() - 1);
+        }
+        // verificare la tabulazione
+        if(numberOfLine > 99 && !translation.substring(translation.length() - 1).equals(")")){
+            translation.append("\t");
+        }
+        if(numberOfLine > 999999 && !translation.substring(translation.length() - 1).equals(")")){
+            translation.append("\t");
+        }
+
     }
 
     public void evaluateM(Token mInstr, Token tInstr) {
+        checkTranslationFormat();
         String token = mInstr.getText();
         String mNumericInstruction = token.substring(1);
 
@@ -149,9 +187,12 @@ public class ParserHandler {
                     break;
                 case "30":
                     translation.append("\tEnd of Program\n");
+                    translation.append("\t---------------------------------------------------------------------\n");
                     break;
                 default:
-
+                    translation.append("\t*** SEMANTIC ERROR [" + ERR_UNKNOWN_M_INSTRUCTION + "] " +
+                            "in (" + mInstr.getLine() + "," + mInstr.getCharPositionInLine() + ") - M Instruction [" + mInstr.getText() + "] hasn't been identified and won't be handled\n");
+                    addErrorMessage(mInstr, ERR_UNKNOWN_M_INSTRUCTION);
             }
         } else {
             // dobbiamo controllare che M sia 6 o 06, altrimenti errore
@@ -172,6 +213,7 @@ public class ParserHandler {
     }
 
     public void evaluateS(Token sInstr) {
+        checkTranslationFormat();
         // Speed rate
         if (sInstr != null) {
             String tool = sInstr.getText();
@@ -182,6 +224,7 @@ public class ParserHandler {
     }
 
     public void evaluateE(Token eInstr) {
+        checkTranslationFormat();
         // Precision feed rate
         if (eInstr != null) {
             String tool = eInstr.getText();
@@ -191,6 +234,7 @@ public class ParserHandler {
     }
 
     public void evaluateF(Token fInstr) {
+        checkTranslationFormat();
         // Feed rate
         if (fInstr != null) {
             String tool = fInstr.getText();
@@ -200,6 +244,7 @@ public class ParserHandler {
     }
 
     public void evaluateG0G1(Token g00, Token g01, Token x, Token y, Token z) {
+        checkTranslationFormat();
         String message = "";
         if (g00 != null) {
             // supponiamo che in questo caso g01 sia null, e che non abbiamo controlli da fare perché ci pensa il Parser
@@ -225,6 +270,7 @@ public class ParserHandler {
     }
 
     public void evaluateG2G3(Token g02, Token g03, Token x, Token y, Token z, Token i, Token j, Token k) {
+        checkTranslationFormat();
         String message = "";
         if (g02 != null) {
             // supponiamo che in questo caso g01 sia null, e che non abbiamo controlli da fare perché ci pensa il Parser
@@ -263,12 +309,12 @@ public class ParserHandler {
 
         len = message.length();
 
-        translation.append(message.substring(0, len - 3) + "]\n");
+        translation.append(message.substring(0, len - 2) + "]\n");
 
     }
 
     public void evaluateOtherG(Token otherG) {
-
+        checkTranslationFormat();
         if (otherG == null) {
             // In teoria non dovrebbe mai succedere
             return;
@@ -306,15 +352,10 @@ public class ParserHandler {
                 break;
             default:
                 // G instruction not defined
-                translation.append("\tG Instruction [" + otherG.getText() + "] not defined\n");
+                translation.append("\t*** SEMANTIC ERROR [" + ERR_UNKNOWN_G_INSTRUCTION + "] " +
+                        "in (" + otherG.getLine() + "," + otherG.getCharPositionInLine() + ") - G Instruction [" + otherG.getText() + "] hasn't been identified and won't be handled\n");
                 addErrorMessage(otherG, ERR_UNKNOWN_G_INSTRUCTION);
         }
     }
 
-    public void evaluateG0G1(Token g00, Token g01, Token token, Token token1, Token token2, Token token3, Token token4, Token token5, Token token6, Token token7, Token token8, Token token9, Token token10, Token token11, Token token12, Token token13, Token token14) {
-        System.out.println(token.getText());
-        System.out.println(token1.getText());
-        System.out.println(token2.getText());
-    }
 }
-// Prova Matteo IntelliJ
