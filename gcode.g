@@ -65,17 +65,21 @@ row	:
 	}
 	
 	
-	geometricInstruction? technologicalInstruction (EOL) // Ogni row finisce con fine riga (EOL) e non può essere l'ultima riga del file
+	(comment=COMMENT 
+		{
+			handler.evaluateComment($comment);
+		} 
+	| geometricInstruction? technologicalInstruction) (EOL) // Ogni row finisce con fine riga (EOL) e non può essere l'ultima riga del file
 	;
 
 geometricInstruction
 	:	
-		((g00=G00 | g01=G01) coordLin=coordinateLineari )
+		((g00=G00 | g01=G01) coordLin=linearCoordinate )
 		{
 			handler.evaluateG0G1($g00, $g01, $coordLin.tk1, $coordLin.tk2, $coordLin.tk3);
 		}
 		| 
-		((g02=G02 | g03=G03) coordLin=coordinateLineari coordCirc=coordinateCircolari )
+		((g02=G02 | g03=G03) coordLin=linearCoordinate coordCirc=circularCoordinate )
 		{
 			handler.evaluateG2G3($g02, $g03, $coordLin.tk1, $coordLin.tk2, $coordLin.tk3, $coordCirc.tk1, $coordCirc.tk2, $coordCirc.tk3);
 		}
@@ -121,7 +125,7 @@ technologicalInstruction
 	;	
 	
 
-coordinateLineari returns [Token tk1, Token tk2, Token tk3]
+linearCoordinate returns [Token tk1, Token tk2, Token tk3]
 	:	
 		// Qui stiamo rendendo valide coordinate circolari su 1 o 2 o 3 dimensioni.
 		// Abbiamo gestito anche le possibili disposizioni delle coordinate
@@ -144,7 +148,7 @@ coordinateLineari returns [Token tk1, Token tk2, Token tk3]
 	;
 	
 	
-coordinateCircolari returns [Token tk1, Token tk2, Token tk3]
+circularCoordinate returns [Token tk1, Token tk2, Token tk3]
 	:	
 		// Qui stiamo rendendo valide coordinate circolari su 2 o 3 dimensioni.
 		// Non ha senso una coordinata circolare su una sola dimensione
@@ -167,7 +171,7 @@ coordinateCircolari returns [Token tk1, Token tk2, Token tk3]
    ------------------------------------------------------------------------- */    
 
 
-COMMENT    :   ';'  ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;}; // questo è appurato corretto
+COMMENT    :   ';'  ~('\n'|'\r')* ; // questo è appurato corretto
 
 WS  :   ( ' ' | '\t' ) {$channel=HIDDEN;}; 
 
@@ -246,7 +250,7 @@ J	: ('j'|'J') FLOAT;
 K	: ('k'|'K') FLOAT;
 
 // Comandi tecnologici
-M	: ('m'|'M') DIGIT DIGIT;
+M	: ('m'|'M') DIGIT DIGIT?;
 S	: ('s'|'S') FLOAT;
 E	: ('e'|'E') FLOAT;
 F	: ('f'|'F') FLOAT;
