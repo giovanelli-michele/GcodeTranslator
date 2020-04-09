@@ -15,14 +15,6 @@ public class ParserHandler {
      */
     public final int ERR_ON_SYNTAX = 1;
     /**
-     * Codice errore semantico no value
-     */
-    public final int ERR_NO_VALUE = 10;
-    /**
-     * Codice errore sematico operazione non definita
-     */
-    public final int ERR_UNDEFINED_OP = 11;
-    /**
      * Codice errore sematico cambio tool non consentito
      * Quando specificato M06 senza tool
      */
@@ -54,6 +46,18 @@ public class ParserHandler {
      * errorList verrà messo nella console e nel file di errori
      */
     public ArrayList<String> errorList;
+
+    /**
+     * variabile per discriminare in fase di scrittura il tipo di programmazione (assoluta/relativa)
+     */
+    private boolean absoluteProgramming = false;
+
+    /**
+        Coordinate del passo precedente
+     */
+    private double xPrevious = 0;
+    private double yPrevious = 0;
+    private double zPrevious = 0;
 
     /**
      * Costruttore del Parser Handler
@@ -89,12 +93,7 @@ public class ParserHandler {
         String msg = "*** SEMANTIC ERROR [" + code + "] "
                 + "in (" + tk.getLine() + "," + tk.getCharPositionInLine() + ") - ";
 
-        if (code == ERR_NO_VALUE)
-            // TODO
-            msg += "La variabile <" + tk.getText() + "> è già stata dichiarata";
-        else if (code == ERR_UNDEFINED_OP)
-            msg += "The operation <" + tk.getText() + "> hasn't been identified and won't be handled";
-        else if (code == ERR_UNAUTHORIZED_TOOL_CHANGE_OP)
+        if (code == ERR_UNAUTHORIZED_TOOL_CHANGE_OP)
             msg += "Change tool requested but no tool specified";
         else if (code == ERR_UNAUTHORIZED_TOOL_OP)
             msg += "Tool [" + tk.getText().substring(1,2) + ", "  + tk.getText().substring(3,4) + "] specified without change request";
@@ -187,6 +186,7 @@ public class ParserHandler {
                     break;
                 case "30":
                     translation.append("\tEnd of Program\n");
+                    translation.append("\tFinal tool position: [x=" + xPrevious + ", y=" + yPrevious + ", z=" + zPrevious + "]\n");
                     translation.append("\t---------------------------------------------------------------------\n");
                     break;
                 default:
@@ -200,9 +200,15 @@ public class ParserHandler {
                 String tool = tInstr.getText();
                 String tNumericInstruction = tool.substring(1);
                 String position = tNumericInstruction.substring(0,2);
-                String configuration = tNumericInstruction.substring(2,4);
+                if(tNumericInstruction.length() > 2) {
+                    String configuration = tNumericInstruction.substring(2,4);
+                    translation.append("\tChange tool with the one at position " + position + " with configuration " + configuration + "\n");
+                } else {
+                    translation.append("\tChange tool with the one at position " + position + " with default configuration\n");
+                }
 
-                translation.append("\tChange tool with the one at position " + position + " with configuration " + configuration + "\n");
+
+
             } else {
                 // gestione errore del cambio di strumento non consentito T....
                 addErrorMessage(tInstr, ERR_UNAUTHORIZED_TOOL_OP);
@@ -255,13 +261,28 @@ public class ParserHandler {
 
         // Ora concateniamo le coordinate presenti
         if (x != null) {
-            message +=  "x=" + x.getText().substring(1) + ", ";
+            message +=  "x=" + Double.parseDouble(x.getText().substring(1)) + ", ";
+            xPrevious = Double.parseDouble(x.getText().substring(1));
+        } else {
+            if(absoluteProgramming) {
+                message +=  "x=" + xPrevious + ", ";
+            }
         }
         if (y != null) {
-            message += "y=" + y.getText().substring(1) + ", ";
+            message += "y=" + Double.parseDouble(y.getText().substring(1)) + ", ";
+            yPrevious = Double.parseDouble(y.getText().substring(1));
+        } else {
+            if(absoluteProgramming) {
+                message +=  "y=" + yPrevious + ", ";
+            }
         }
         if (z != null) {
-            message += "z=" + z.getText().substring(1) + ", ";
+            message += "z=" + Double.parseDouble(z.getText().substring(1)) + ", ";
+            zPrevious = Double.parseDouble(z.getText().substring(1));
+        } else {
+            if(absoluteProgramming) {
+                message +=  "z=" + zPrevious + ", ";
+            }
         }
 
         int len = message.length();
@@ -282,29 +303,44 @@ public class ParserHandler {
         // Ora concateniamo le coordinate presenti
         // [x=12, y=23, z=56]
         if (x != null) {
-            message += "x=" + x.getText().substring(1) + ", ";
+            message += "x=" + Double.parseDouble(x.getText().substring(1)) + ", ";
+            xPrevious = Double.parseDouble(x.getText().substring(1));
+        } else {
+            if(absoluteProgramming) {
+                message +=  "x=" + xPrevious + ", ";
+            }
         }
         if (y != null) {
-            message += "y=" + y.getText().substring(1) + ", ";
+            message += "y=" + Double.parseDouble(y.getText().substring(1)) + ", ";
+            yPrevious = Double.parseDouble(y.getText().substring(1));
+        } else {
+            if(absoluteProgramming) {
+                message +=  "y=" + yPrevious + ", ";
+            }
         }
         if (z != null) {
-            message += "z=" + z.getText().substring(1) + ", ";
+            message += "z=" + Double.parseDouble(z.getText().substring(1)) + ", ";
+            zPrevious = Double.parseDouble(z.getText().substring(1));
+        } else {
+            if(absoluteProgramming) {
+                message +=  "z=" + zPrevious + ", ";
+            }
         }
 
-        // eliminiamo l'ultima seqenza ', '
+        // eliminiamo l'ultima sequenza ', '
         int len = message.length();
-        message = message.substring(0, len - 3);
+        message = message.substring(0, len - 2);
 
         message += "] with center in [";
 
         if (i != null) {
-            message += "x=" + i.getText().substring(1) + ", ";
+            message += "x=" + Double.parseDouble(i.getText().substring(1)) + ", ";
         }
         if (j != null) {
-            message += "y=" + j.getText().substring(1) + ", ";
+            message += "y=" + Double.parseDouble(j.getText().substring(1)) + ", ";
         }
         if (k != null) {
-            message += "z=" + k.getText().substring(1) + ", ";
+            message += "z=" + Double.parseDouble(k.getText().substring(1)) + ", ";
         }
 
         len = message.length();
@@ -334,9 +370,11 @@ public class ParserHandler {
                 break;
             case "90":
                 translation.append("\tAbsolute programming\n");
+                absoluteProgramming = true;
                 break;
             case "91":
                 translation.append("\tIncremental programming\n");
+                absoluteProgramming = false;
                 break;
             case "94":
                 translation.append("\tMeasure unit for feed rate instruction set to [mm/min]\n");

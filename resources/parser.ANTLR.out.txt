@@ -1,23 +1,25 @@
 1)	/* Example */
 2)	Absolute programming
-	Change tool with the one at position 02 with configuration 03
+	Change tool with the one at position 02 with default configuration
 3)	Measure unit for feed rate instruction set to [mm/rev]
 4)	Measure unit for speed rate instruction set to [rev/min]
 	Speed rate value = 1200
+	Precision feed rate value  = 15
 	Feed rate value  = 0.2
 	Tool clockwise rotation
 	Activate cooling lubrificant
-5)	Rapid positioning to [x=30, y=50, z=1]
-6)	Linear interpolation positioning to [z=21]
-7)	Rapid positioning to [z=10]
-8)	Rapid positioning to [z=100]
+5)	Rapid positioning to [x=30.0, y=50.0, z=1.0]
+6)	Linear interpolation positioning to [x=30.0, y=50.0, z=21.0]
+7)	Rapid positioning to [x=30.0, y=50.0, z=10.0]
+8)	Rapid positioning to [x=30.0, y=50.0, z=100.0]
 	Stop tool
 	Deactivate cooling lubrificant
-9)	Circular clockwise interpolation to [x=12.40, y=10, z=2] with center in [x=20, y=30]
-10)	Linear interpolation positioning to [x=1240, y=10, z=21]
-11)	Rapid positioning to [z=1]
-12)	Rapid positioning to [z=100]
+9)	Circular clockwise interpolation to [x=12.4, y=10.0, z=21.0] with center in [x=20.0, y=30.0]
+10)	Linear interpolation positioning to [x=1240.0, y=10.0, z=21.0]
+11)	Rapid positioning to [x=1240.0, y=10.0, z=1.0]
+12)	Rapid positioning to [x=1240.0, y=10.0, z=100.0]
 	Stop tool
 	Deactivate cooling lubrificant
 	End of Program
+	Final tool position: [x=1240.0, y=10.0, z=100.0]
 	---------------------------------------------------------------------

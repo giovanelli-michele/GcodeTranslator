@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g 2020-04-09 10:36:56
+// $ANTLR 3.5.1 C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g 2020-04-09 14:09:00
 
   // Questo è il codice inserito fuori dalla classe del Parser
   package compilerPackage;
@@ -246,7 +246,7 @@ public class gcodeParser extends Parser {
 
 
 	// $ANTLR start "geometricInstruction"
-	// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:75:1: geometricInstruction : ( ( (g00= G00 |g01= G01 ) coordLin= coordinateLineari ) | ( (g02= G02 |g03= G03 ) coordLin= coordinateLineari coordCirc= coordinateCircolari ) |otherG= ( G40 | G41 | G42 | G90 | G91 | G94 | G95 | G96 | G97 | OTHERG ) );
+	// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:75:1: geometricInstruction : ( ( (g00= G00 |g01= G01 ) coordLin= linearCoordinate ) | ( (g02= G02 |g03= G03 ) coordLin= linearCoordinate coordCirc= circularCoordinate ) |otherG= ( G40 | G41 | G42 | G90 | G91 | G94 | G95 | G96 | G97 | OTHERG ) );
 	public final void geometricInstruction() throws RecognitionException {
 		Token g00=null;
 		Token g01=null;
@@ -257,7 +257,7 @@ public class gcodeParser extends Parser {
 		ParserRuleReturnScope coordCirc =null;
 
 		try {
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:76:2: ( ( (g00= G00 |g01= G01 ) coordLin= coordinateLineari ) | ( (g02= G02 |g03= G03 ) coordLin= coordinateLineari coordCirc= coordinateCircolari ) |otherG= ( G40 | G41 | G42 | G90 | G91 | G94 | G95 | G96 | G97 | OTHERG ) )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:76:2: ( ( (g00= G00 |g01= G01 ) coordLin= linearCoordinate ) | ( (g02= G02 |g03= G03 ) coordLin= linearCoordinate coordCirc= circularCoordinate ) |otherG= ( G40 | G41 | G42 | G90 | G91 | G94 | G95 | G96 | G97 | OTHERG ) )
 			int alt6=3;
 			switch ( input.LA(1) ) {
 			case G00:
@@ -293,10 +293,10 @@ public class gcodeParser extends Parser {
 			}
 			switch (alt6) {
 				case 1 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:77:3: ( (g00= G00 |g01= G01 ) coordLin= coordinateLineari )
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:77:3: ( (g00= G00 |g01= G01 ) coordLin= linearCoordinate )
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:77:3: ( (g00= G00 |g01= G01 ) coordLin= coordinateLineari )
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:77:4: (g00= G00 |g01= G01 ) coordLin= coordinateLineari
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:77:3: ( (g00= G00 |g01= G01 ) coordLin= linearCoordinate )
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:77:4: (g00= G00 |g01= G01 ) coordLin= linearCoordinate
 					{
 					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:77:4: (g00= G00 |g01= G01 )
 					int alt4=2;
@@ -330,22 +330,22 @@ public class gcodeParser extends Parser {
 
 					}
 
-					pushFollow(FOLLOW_coordinateLineari_in_geometricInstruction158);
-					coordLin=coordinateLineari();
+					pushFollow(FOLLOW_linearCoordinate_in_geometricInstruction158);
+					coordLin=linearCoordinate();
 					state._fsp--;
 
 					}
 
 
-								handler.evaluateG0G1(g00, g01, (coordLin!=null?((gcodeParser.coordinateLineari_return)coordLin).tk1:null), (coordLin!=null?((gcodeParser.coordinateLineari_return)coordLin).tk2:null), (coordLin!=null?((gcodeParser.coordinateLineari_return)coordLin).tk3:null));
+								handler.evaluateG0G1(g00, g01, (coordLin!=null?((gcodeParser.linearCoordinate_return)coordLin).tk1:null), (coordLin!=null?((gcodeParser.linearCoordinate_return)coordLin).tk2:null), (coordLin!=null?((gcodeParser.linearCoordinate_return)coordLin).tk3:null));
 							
 					}
 					break;
 				case 2 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:82:3: ( (g02= G02 |g03= G03 ) coordLin= coordinateLineari coordCirc= coordinateCircolari )
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:82:3: ( (g02= G02 |g03= G03 ) coordLin= linearCoordinate coordCirc= circularCoordinate )
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:82:3: ( (g02= G02 |g03= G03 ) coordLin= coordinateLineari coordCirc= coordinateCircolari )
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:82:4: (g02= G02 |g03= G03 ) coordLin= coordinateLineari coordCirc= coordinateCircolari
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:82:3: ( (g02= G02 |g03= G03 ) coordLin= linearCoordinate coordCirc= circularCoordinate )
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:82:4: (g02= G02 |g03= G03 ) coordLin= linearCoordinate coordCirc= circularCoordinate
 					{
 					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:82:4: (g02= G02 |g03= G03 )
 					int alt5=2;
@@ -379,18 +379,18 @@ public class gcodeParser extends Parser {
 
 					}
 
-					pushFollow(FOLLOW_coordinateLineari_in_geometricInstruction188);
-					coordLin=coordinateLineari();
+					pushFollow(FOLLOW_linearCoordinate_in_geometricInstruction188);
+					coordLin=linearCoordinate();
 					state._fsp--;
 
-					pushFollow(FOLLOW_coordinateCircolari_in_geometricInstruction192);
-					coordCirc=coordinateCircolari();
+					pushFollow(FOLLOW_circularCoordinate_in_geometricInstruction192);
+					coordCirc=circularCoordinate();
 					state._fsp--;
 
 					}
 
 
-								handler.evaluateG2G3(g02, g03, (coordLin!=null?((gcodeParser.coordinateLineari_return)coordLin).tk1:null), (coordLin!=null?((gcodeParser.coordinateLineari_return)coordLin).tk2:null), (coordLin!=null?((gcodeParser.coordinateLineari_return)coordLin).tk3:null), (coordCirc!=null?((gcodeParser.coordinateCircolari_return)coordCirc).tk1:null), (coordCirc!=null?((gcodeParser.coordinateCircolari_return)coordCirc).tk2:null), (coordCirc!=null?((gcodeParser.coordinateCircolari_return)coordCirc).tk3:null));
+								handler.evaluateG2G3(g02, g03, (coordLin!=null?((gcodeParser.linearCoordinate_return)coordLin).tk1:null), (coordLin!=null?((gcodeParser.linearCoordinate_return)coordLin).tk2:null), (coordLin!=null?((gcodeParser.linearCoordinate_return)coordLin).tk3:null), (coordCirc!=null?((gcodeParser.circularCoordinate_return)coordCirc).tk1:null), (coordCirc!=null?((gcodeParser.circularCoordinate_return)coordCirc).tk2:null), (coordCirc!=null?((gcodeParser.circularCoordinate_return)coordCirc).tk3:null));
 							
 					}
 					break;
@@ -560,17 +560,17 @@ public class gcodeParser extends Parser {
 	// $ANTLR end "technologicalInstruction"
 
 
-	public static class coordinateLineari_return extends ParserRuleReturnScope {
+	public static class linearCoordinate_return extends ParserRuleReturnScope {
 		public Token tk1;
 		public Token tk2;
 		public Token tk3;
 	};
 
 
-	// $ANTLR start "coordinateLineari"
-	// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:128:1: coordinateLineari returns [Token tk1, Token tk2, Token tk3] : (x= X (y= Y ( (z= Z )? ) |z= Z ( (y= Y )? ) )? |y= Y (x= X ( (z= Z )? ) |z= Z ( (x= X )? ) )? |z= Z (x= X ( (y= Y )? ) |y= Y ( (x= X )? ) )? ) ;
-	public final gcodeParser.coordinateLineari_return coordinateLineari() throws RecognitionException {
-		gcodeParser.coordinateLineari_return retval = new gcodeParser.coordinateLineari_return();
+	// $ANTLR start "linearCoordinate"
+	// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:128:1: linearCoordinate returns [Token tk1, Token tk2, Token tk3] : (x= X (y= Y ( (z= Z )? ) |z= Z ( (y= Y )? ) )? |y= Y (x= X ( (z= Z )? ) |z= Z ( (x= X )? ) )? |z= Z (x= X ( (y= Y )? ) |y= Y ( (x= X )? ) )? ) ;
+	public final gcodeParser.linearCoordinate_return linearCoordinate() throws RecognitionException {
+		gcodeParser.linearCoordinate_return retval = new gcodeParser.linearCoordinate_return();
 		retval.start = input.LT(1);
 
 		Token x=null;
@@ -608,7 +608,7 @@ public class gcodeParser extends Parser {
 				case 1 :
 					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:133:4: x= X (y= Y ( (z= Z )? ) |z= Z ( (y= Y )? ) )?
 					{
-					x=(Token)match(input,X,FOLLOW_X_in_coordinateLineari388); 
+					x=(Token)match(input,X,FOLLOW_X_in_linearCoordinate388); 
 					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:133:9: (y= Y ( (z= Z )? ) |z= Z ( (y= Y )? ) )?
 					int alt14=3;
 					int LA14_0 = input.LA(1);
@@ -622,7 +622,7 @@ public class gcodeParser extends Parser {
 						case 1 :
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:133:11: y= Y ( (z= Z )? )
 							{
-							y=(Token)match(input,Y,FOLLOW_Y_in_coordinateLineari395); 
+							y=(Token)match(input,Y,FOLLOW_Y_in_linearCoordinate395); 
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:133:15: ( (z= Z )? )
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:133:17: (z= Z )?
 							{
@@ -636,7 +636,7 @@ public class gcodeParser extends Parser {
 								case 1 :
 									// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:133:18: z= Z
 									{
-									z=(Token)match(input,Z,FOLLOW_Z_in_coordinateLineari401); 
+									z=(Token)match(input,Z,FOLLOW_Z_in_linearCoordinate401); 
 									}
 									break;
 
@@ -649,7 +649,7 @@ public class gcodeParser extends Parser {
 						case 2 :
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:133:25: z= Z ( (y= Y )? )
 							{
-							z=(Token)match(input,Z,FOLLOW_Z_in_coordinateLineari409); 
+							z=(Token)match(input,Z,FOLLOW_Z_in_linearCoordinate409); 
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:133:29: ( (y= Y )? )
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:133:31: (y= Y )?
 							{
@@ -663,7 +663,7 @@ public class gcodeParser extends Parser {
 								case 1 :
 									// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:133:32: y= Y
 									{
-									y=(Token)match(input,Y,FOLLOW_Y_in_coordinateLineari415); 
+									y=(Token)match(input,Y,FOLLOW_Y_in_linearCoordinate415); 
 									}
 									break;
 
@@ -681,7 +681,7 @@ public class gcodeParser extends Parser {
 				case 2 :
 					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:135:5: y= Y (x= X ( (z= Z )? ) |z= Z ( (x= X )? ) )?
 					{
-					y=(Token)match(input,Y,FOLLOW_Y_in_coordinateLineari430); 
+					y=(Token)match(input,Y,FOLLOW_Y_in_linearCoordinate430); 
 					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:135:9: (x= X ( (z= Z )? ) |z= Z ( (x= X )? ) )?
 					int alt17=3;
 					int LA17_0 = input.LA(1);
@@ -695,7 +695,7 @@ public class gcodeParser extends Parser {
 						case 1 :
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:135:11: x= X ( (z= Z )? )
 							{
-							x=(Token)match(input,X,FOLLOW_X_in_coordinateLineari436); 
+							x=(Token)match(input,X,FOLLOW_X_in_linearCoordinate436); 
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:135:15: ( (z= Z )? )
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:135:16: (z= Z )?
 							{
@@ -709,7 +709,7 @@ public class gcodeParser extends Parser {
 								case 1 :
 									// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:135:17: z= Z
 									{
-									z=(Token)match(input,Z,FOLLOW_Z_in_coordinateLineari441); 
+									z=(Token)match(input,Z,FOLLOW_Z_in_linearCoordinate441); 
 									}
 									break;
 
@@ -722,7 +722,7 @@ public class gcodeParser extends Parser {
 						case 2 :
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:135:24: z= Z ( (x= X )? )
 							{
-							z=(Token)match(input,Z,FOLLOW_Z_in_coordinateLineari449); 
+							z=(Token)match(input,Z,FOLLOW_Z_in_linearCoordinate449); 
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:135:28: ( (x= X )? )
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:135:29: (x= X )?
 							{
@@ -736,7 +736,7 @@ public class gcodeParser extends Parser {
 								case 1 :
 									// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:135:30: x= X
 									{
-									x=(Token)match(input,X,FOLLOW_X_in_coordinateLineari454); 
+									x=(Token)match(input,X,FOLLOW_X_in_linearCoordinate454); 
 									}
 									break;
 
@@ -754,7 +754,7 @@ public class gcodeParser extends Parser {
 				case 3 :
 					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:137:5: z= Z (x= X ( (y= Y )? ) |y= Y ( (x= X )? ) )?
 					{
-					z=(Token)match(input,Z,FOLLOW_Z_in_coordinateLineari468); 
+					z=(Token)match(input,Z,FOLLOW_Z_in_linearCoordinate468); 
 					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:137:9: (x= X ( (y= Y )? ) |y= Y ( (x= X )? ) )?
 					int alt20=3;
 					int LA20_0 = input.LA(1);
@@ -768,7 +768,7 @@ public class gcodeParser extends Parser {
 						case 1 :
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:137:10: x= X ( (y= Y )? )
 							{
-							x=(Token)match(input,X,FOLLOW_X_in_coordinateLineari473); 
+							x=(Token)match(input,X,FOLLOW_X_in_linearCoordinate473); 
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:137:14: ( (y= Y )? )
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:137:15: (y= Y )?
 							{
@@ -782,7 +782,7 @@ public class gcodeParser extends Parser {
 								case 1 :
 									// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:137:16: y= Y
 									{
-									y=(Token)match(input,Y,FOLLOW_Y_in_coordinateLineari478); 
+									y=(Token)match(input,Y,FOLLOW_Y_in_linearCoordinate478); 
 									}
 									break;
 
@@ -795,7 +795,7 @@ public class gcodeParser extends Parser {
 						case 2 :
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:137:23: y= Y ( (x= X )? )
 							{
-							y=(Token)match(input,Y,FOLLOW_Y_in_coordinateLineari486); 
+							y=(Token)match(input,Y,FOLLOW_Y_in_linearCoordinate486); 
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:137:27: ( (x= X )? )
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:137:28: (x= X )?
 							{
@@ -809,7 +809,7 @@ public class gcodeParser extends Parser {
 								case 1 :
 									// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:137:29: x= X
 									{
-									x=(Token)match(input,X,FOLLOW_X_in_coordinateLineari491); 
+									x=(Token)match(input,X,FOLLOW_X_in_linearCoordinate491); 
 									}
 									break;
 
@@ -848,20 +848,20 @@ public class gcodeParser extends Parser {
 		}
 		return retval;
 	}
-	// $ANTLR end "coordinateLineari"
+	// $ANTLR end "linearCoordinate"
 
 
-	public static class coordinateCircolari_return extends ParserRuleReturnScope {
+	public static class circularCoordinate_return extends ParserRuleReturnScope {
 		public Token tk1;
 		public Token tk2;
 		public Token tk3;
 	};
 
 
-	// $ANTLR start "coordinateCircolari"
-	// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:151:1: coordinateCircolari returns [Token tk1, Token tk2, Token tk3] : (x= I (y= J ( (z= K )? ) |z= K ( (y= J )? ) ) |y= J (x= I ( (z= K )? ) |z= K ( (x= I )? ) ) |z= K (x= I ( (y= J )? ) |y= J ( (x= I )? ) ) ) ;
-	public final gcodeParser.coordinateCircolari_return coordinateCircolari() throws RecognitionException {
-		gcodeParser.coordinateCircolari_return retval = new gcodeParser.coordinateCircolari_return();
+	// $ANTLR start "circularCoordinate"
+	// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:151:1: circularCoordinate returns [Token tk1, Token tk2, Token tk3] : (x= I (y= J ( (z= K )? ) |z= K ( (y= J )? ) ) |y= J (x= I ( (z= K )? ) |z= K ( (x= I )? ) ) |z= K (x= I ( (y= J )? ) |y= J ( (x= I )? ) ) ) ;
+	public final gcodeParser.circularCoordinate_return circularCoordinate() throws RecognitionException {
+		gcodeParser.circularCoordinate_return retval = new gcodeParser.circularCoordinate_return();
 		retval.start = input.LT(1);
 
 		Token x=null;
@@ -899,7 +899,7 @@ public class gcodeParser extends Parser {
 				case 1 :
 					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:4: x= I (y= J ( (z= K )? ) |z= K ( (y= J )? ) )
 					{
-					x=(Token)match(input,I,FOLLOW_I_in_coordinateCircolari549); 
+					x=(Token)match(input,I,FOLLOW_I_in_circularCoordinate549); 
 					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:8: (y= J ( (z= K )? ) |z= K ( (y= J )? ) )
 					int alt24=2;
 					int LA24_0 = input.LA(1);
@@ -920,7 +920,7 @@ public class gcodeParser extends Parser {
 						case 1 :
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:10: y= J ( (z= K )? )
 							{
-							y=(Token)match(input,J,FOLLOW_J_in_coordinateCircolari555); 
+							y=(Token)match(input,J,FOLLOW_J_in_circularCoordinate555); 
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:14: ( (z= K )? )
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:16: (z= K )?
 							{
@@ -934,7 +934,7 @@ public class gcodeParser extends Parser {
 								case 1 :
 									// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:17: z= K
 									{
-									z=(Token)match(input,K,FOLLOW_K_in_coordinateCircolari561); 
+									z=(Token)match(input,K,FOLLOW_K_in_circularCoordinate561); 
 									}
 									break;
 
@@ -947,7 +947,7 @@ public class gcodeParser extends Parser {
 						case 2 :
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:24: z= K ( (y= J )? )
 							{
-							z=(Token)match(input,K,FOLLOW_K_in_coordinateCircolari569); 
+							z=(Token)match(input,K,FOLLOW_K_in_circularCoordinate569); 
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:28: ( (y= J )? )
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:30: (y= J )?
 							{
@@ -961,7 +961,7 @@ public class gcodeParser extends Parser {
 								case 1 :
 									// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:31: y= J
 									{
-									y=(Token)match(input,J,FOLLOW_J_in_coordinateCircolari575); 
+									y=(Token)match(input,J,FOLLOW_J_in_circularCoordinate575); 
 									}
 									break;
 
@@ -979,7 +979,7 @@ public class gcodeParser extends Parser {
 				case 2 :
 					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:40: y= J (x= I ( (z= K )? ) |z= K ( (x= I )? ) )
 					{
-					y=(Token)match(input,J,FOLLOW_J_in_coordinateCircolari585); 
+					y=(Token)match(input,J,FOLLOW_J_in_circularCoordinate585); 
 					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:44: (x= I ( (z= K )? ) |z= K ( (x= I )? ) )
 					int alt27=2;
 					int LA27_0 = input.LA(1);
@@ -1000,7 +1000,7 @@ public class gcodeParser extends Parser {
 						case 1 :
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:46: x= I ( (z= K )? )
 							{
-							x=(Token)match(input,I,FOLLOW_I_in_coordinateCircolari591); 
+							x=(Token)match(input,I,FOLLOW_I_in_circularCoordinate591); 
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:50: ( (z= K )? )
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:51: (z= K )?
 							{
@@ -1014,7 +1014,7 @@ public class gcodeParser extends Parser {
 								case 1 :
 									// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:52: z= K
 									{
-									z=(Token)match(input,K,FOLLOW_K_in_coordinateCircolari596); 
+									z=(Token)match(input,K,FOLLOW_K_in_circularCoordinate596); 
 									}
 									break;
 
@@ -1027,7 +1027,7 @@ public class gcodeParser extends Parser {
 						case 2 :
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:59: z= K ( (x= I )? )
 							{
-							z=(Token)match(input,K,FOLLOW_K_in_coordinateCircolari604); 
+							z=(Token)match(input,K,FOLLOW_K_in_circularCoordinate604); 
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:63: ( (x= I )? )
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:64: (x= I )?
 							{
@@ -1041,7 +1041,7 @@ public class gcodeParser extends Parser {
 								case 1 :
 									// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:65: x= I
 									{
-									x=(Token)match(input,I,FOLLOW_I_in_coordinateCircolari609); 
+									x=(Token)match(input,I,FOLLOW_I_in_circularCoordinate609); 
 									}
 									break;
 
@@ -1059,7 +1059,7 @@ public class gcodeParser extends Parser {
 				case 3 :
 					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:73: z= K (x= I ( (y= J )? ) |y= J ( (x= I )? ) )
 					{
-					z=(Token)match(input,K,FOLLOW_K_in_coordinateCircolari618); 
+					z=(Token)match(input,K,FOLLOW_K_in_circularCoordinate618); 
 					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:77: (x= I ( (y= J )? ) |y= J ( (x= I )? ) )
 					int alt30=2;
 					int LA30_0 = input.LA(1);
@@ -1080,7 +1080,7 @@ public class gcodeParser extends Parser {
 						case 1 :
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:78: x= I ( (y= J )? )
 							{
-							x=(Token)match(input,I,FOLLOW_I_in_coordinateCircolari623); 
+							x=(Token)match(input,I,FOLLOW_I_in_circularCoordinate623); 
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:82: ( (y= J )? )
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:83: (y= J )?
 							{
@@ -1094,7 +1094,7 @@ public class gcodeParser extends Parser {
 								case 1 :
 									// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:84: y= J
 									{
-									y=(Token)match(input,J,FOLLOW_J_in_coordinateCircolari628); 
+									y=(Token)match(input,J,FOLLOW_J_in_circularCoordinate628); 
 									}
 									break;
 
@@ -1107,7 +1107,7 @@ public class gcodeParser extends Parser {
 						case 2 :
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:91: y= J ( (x= I )? )
 							{
-							y=(Token)match(input,J,FOLLOW_J_in_coordinateCircolari636); 
+							y=(Token)match(input,J,FOLLOW_J_in_circularCoordinate636); 
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:95: ( (x= I )? )
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:96: (x= I )?
 							{
@@ -1121,7 +1121,7 @@ public class gcodeParser extends Parser {
 								case 1 :
 									// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:158:97: x= I
 									{
-									x=(Token)match(input,I,FOLLOW_I_in_coordinateCircolari641); 
+									x=(Token)match(input,I,FOLLOW_I_in_circularCoordinate641); 
 									}
 									break;
 
@@ -1160,7 +1160,7 @@ public class gcodeParser extends Parser {
 		}
 		return retval;
 	}
-	// $ANTLR end "coordinateCircolari"
+	// $ANTLR end "circularCoordinate"
 
 	// Delegated rules
 
@@ -1174,45 +1174,45 @@ public class gcodeParser extends Parser {
 	public static final BitSet FOLLOW_EOL_in_row127 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_G00_in_geometricInstruction147 = new BitSet(new long[]{0x0000001C00000000L});
 	public static final BitSet FOLLOW_G01_in_geometricInstruction153 = new BitSet(new long[]{0x0000001C00000000L});
-	public static final BitSet FOLLOW_coordinateLineari_in_geometricInstruction158 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_linearCoordinate_in_geometricInstruction158 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_G02_in_geometricInstruction177 = new BitSet(new long[]{0x0000001C00000000L});
 	public static final BitSet FOLLOW_G03_in_geometricInstruction183 = new BitSet(new long[]{0x0000001C00000000L});
-	public static final BitSet FOLLOW_coordinateLineari_in_geometricInstruction188 = new BitSet(new long[]{0x000000000E000000L});
-	public static final BitSet FOLLOW_coordinateCircolari_in_geometricInstruction192 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_linearCoordinate_in_geometricInstruction188 = new BitSet(new long[]{0x000000000E000000L});
+	public static final BitSet FOLLOW_circularCoordinate_in_geometricInstruction192 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_set_in_geometricInstruction208 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_S_in_technologicalInstruction274 = new BitSet(new long[]{0x0000000010000502L});
 	public static final BitSet FOLLOW_E_in_technologicalInstruction291 = new BitSet(new long[]{0x0000000010000402L});
 	public static final BitSet FOLLOW_F_in_technologicalInstruction307 = new BitSet(new long[]{0x0000000010000002L});
 	public static final BitSet FOLLOW_M_in_technologicalInstruction334 = new BitSet(new long[]{0x0000000110000002L});
 	public static final BitSet FOLLOW_T_in_technologicalInstruction338 = new BitSet(new long[]{0x0000000010000002L});
-	public static final BitSet FOLLOW_X_in_coordinateLineari388 = new BitSet(new long[]{0x0000001800000002L});
-	public static final BitSet FOLLOW_Y_in_coordinateLineari395 = new BitSet(new long[]{0x0000001000000002L});
-	public static final BitSet FOLLOW_Z_in_coordinateLineari401 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_Z_in_coordinateLineari409 = new BitSet(new long[]{0x0000000800000002L});
-	public static final BitSet FOLLOW_Y_in_coordinateLineari415 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_Y_in_coordinateLineari430 = new BitSet(new long[]{0x0000001400000002L});
-	public static final BitSet FOLLOW_X_in_coordinateLineari436 = new BitSet(new long[]{0x0000001000000002L});
-	public static final BitSet FOLLOW_Z_in_coordinateLineari441 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_Z_in_coordinateLineari449 = new BitSet(new long[]{0x0000000400000002L});
-	public static final BitSet FOLLOW_X_in_coordinateLineari454 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_Z_in_coordinateLineari468 = new BitSet(new long[]{0x0000000C00000002L});
-	public static final BitSet FOLLOW_X_in_coordinateLineari473 = new BitSet(new long[]{0x0000000800000002L});
-	public static final BitSet FOLLOW_Y_in_coordinateLineari478 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_Y_in_coordinateLineari486 = new BitSet(new long[]{0x0000000400000002L});
-	public static final BitSet FOLLOW_X_in_coordinateLineari491 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_I_in_coordinateCircolari549 = new BitSet(new long[]{0x000000000C000000L});
-	public static final BitSet FOLLOW_J_in_coordinateCircolari555 = new BitSet(new long[]{0x0000000008000002L});
-	public static final BitSet FOLLOW_K_in_coordinateCircolari561 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_K_in_coordinateCircolari569 = new BitSet(new long[]{0x0000000004000002L});
-	public static final BitSet FOLLOW_J_in_coordinateCircolari575 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_J_in_coordinateCircolari585 = new BitSet(new long[]{0x000000000A000000L});
-	public static final BitSet FOLLOW_I_in_coordinateCircolari591 = new BitSet(new long[]{0x0000000008000002L});
-	public static final BitSet FOLLOW_K_in_coordinateCircolari596 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_K_in_coordinateCircolari604 = new BitSet(new long[]{0x0000000002000002L});
-	public static final BitSet FOLLOW_I_in_coordinateCircolari609 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_K_in_coordinateCircolari618 = new BitSet(new long[]{0x0000000006000000L});
-	public static final BitSet FOLLOW_I_in_coordinateCircolari623 = new BitSet(new long[]{0x0000000004000002L});
-	public static final BitSet FOLLOW_J_in_coordinateCircolari628 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_J_in_coordinateCircolari636 = new BitSet(new long[]{0x0000000002000002L});
-	public static final BitSet FOLLOW_I_in_coordinateCircolari641 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_X_in_linearCoordinate388 = new BitSet(new long[]{0x0000001800000002L});
+	public static final BitSet FOLLOW_Y_in_linearCoordinate395 = new BitSet(new long[]{0x0000001000000002L});
+	public static final BitSet FOLLOW_Z_in_linearCoordinate401 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_Z_in_linearCoordinate409 = new BitSet(new long[]{0x0000000800000002L});
+	public static final BitSet FOLLOW_Y_in_linearCoordinate415 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_Y_in_linearCoordinate430 = new BitSet(new long[]{0x0000001400000002L});
+	public static final BitSet FOLLOW_X_in_linearCoordinate436 = new BitSet(new long[]{0x0000001000000002L});
+	public static final BitSet FOLLOW_Z_in_linearCoordinate441 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_Z_in_linearCoordinate449 = new BitSet(new long[]{0x0000000400000002L});
+	public static final BitSet FOLLOW_X_in_linearCoordinate454 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_Z_in_linearCoordinate468 = new BitSet(new long[]{0x0000000C00000002L});
+	public static final BitSet FOLLOW_X_in_linearCoordinate473 = new BitSet(new long[]{0x0000000800000002L});
+	public static final BitSet FOLLOW_Y_in_linearCoordinate478 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_Y_in_linearCoordinate486 = new BitSet(new long[]{0x0000000400000002L});
+	public static final BitSet FOLLOW_X_in_linearCoordinate491 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_I_in_circularCoordinate549 = new BitSet(new long[]{0x000000000C000000L});
+	public static final BitSet FOLLOW_J_in_circularCoordinate555 = new BitSet(new long[]{0x0000000008000002L});
+	public static final BitSet FOLLOW_K_in_circularCoordinate561 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_K_in_circularCoordinate569 = new BitSet(new long[]{0x0000000004000002L});
+	public static final BitSet FOLLOW_J_in_circularCoordinate575 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_J_in_circularCoordinate585 = new BitSet(new long[]{0x000000000A000000L});
+	public static final BitSet FOLLOW_I_in_circularCoordinate591 = new BitSet(new long[]{0x0000000008000002L});
+	public static final BitSet FOLLOW_K_in_circularCoordinate596 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_K_in_circularCoordinate604 = new BitSet(new long[]{0x0000000002000002L});
+	public static final BitSet FOLLOW_I_in_circularCoordinate609 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_K_in_circularCoordinate618 = new BitSet(new long[]{0x0000000006000000L});
+	public static final BitSet FOLLOW_I_in_circularCoordinate623 = new BitSet(new long[]{0x0000000004000002L});
+	public static final BitSet FOLLOW_J_in_circularCoordinate628 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_J_in_circularCoordinate636 = new BitSet(new long[]{0x0000000002000002L});
+	public static final BitSet FOLLOW_I_in_circularCoordinate641 = new BitSet(new long[]{0x0000000000000002L});
 }
