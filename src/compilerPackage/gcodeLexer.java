@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g 2020-04-09 14:09:00
+// $ANTLR 3.5.1 C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g 2020-04-09 16:27:05
 
   // Questo è il codice inserito fuori dalla classe del Lexer
   package compilerPackage;
@@ -2388,58 +2388,74 @@ public class gcodeLexer extends Lexer {
 	// $ANTLR start "FLOAT"
 	public final void mFLOAT() throws RecognitionException {
 		try {
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:7: ( ( '0' | D0GIT ( ( DIGIT )+ )? ) ( '.' ( DIGIT )+ )? )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:9: ( '0' | D0GIT ( ( DIGIT )+ )? ) ( '.' ( DIGIT )+ )?
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:7: ( ( '-' )? ( '0' | D0GIT ( ( DIGIT )+ )? ) ( '.' ( DIGIT )+ )? )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:9: ( '-' )? ( '0' | D0GIT ( ( DIGIT )+ )? ) ( '.' ( DIGIT )+ )?
 			{
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:9: ( '0' | D0GIT ( ( DIGIT )+ )? )
-			int alt51=2;
-			int LA51_0 = input.LA(1);
-			if ( (LA51_0=='0') ) {
-				alt51=1;
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:9: ( '-' )?
+			int alt49=2;
+			int LA49_0 = input.LA(1);
+			if ( (LA49_0=='-') ) {
+				alt49=1;
 			}
-			else if ( ((LA51_0 >= '1' && LA51_0 <= '9')) ) {
-				alt51=2;
+			switch (alt49) {
+				case 1 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:9: '-'
+					{
+					match('-'); 
+					}
+					break;
+
+			}
+
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:14: ( '0' | D0GIT ( ( DIGIT )+ )? )
+			int alt52=2;
+			int LA52_0 = input.LA(1);
+			if ( (LA52_0=='0') ) {
+				alt52=1;
+			}
+			else if ( ((LA52_0 >= '1' && LA52_0 <= '9')) ) {
+				alt52=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 51, 0, input);
+					new NoViableAltException("", 52, 0, input);
 				throw nvae;
 			}
 
-			switch (alt51) {
+			switch (alt52) {
 				case 1 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:11: '0'
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:16: '0'
 					{
 					match('0'); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:17: D0GIT ( ( DIGIT )+ )?
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:22: D0GIT ( ( DIGIT )+ )?
 					{
 					mD0GIT(); 
 
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:23: ( ( DIGIT )+ )?
-					int alt50=2;
-					int LA50_0 = input.LA(1);
-					if ( ((LA50_0 >= '0' && LA50_0 <= '9')) ) {
-						alt50=1;
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:28: ( ( DIGIT )+ )?
+					int alt51=2;
+					int LA51_0 = input.LA(1);
+					if ( ((LA51_0 >= '0' && LA51_0 <= '9')) ) {
+						alt51=1;
 					}
-					switch (alt50) {
+					switch (alt51) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:24: ( DIGIT )+
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:29: ( DIGIT )+
 							{
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:24: ( DIGIT )+
-							int cnt49=0;
-							loop49:
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:29: ( DIGIT )+
+							int cnt50=0;
+							loop50:
 							while (true) {
-								int alt49=2;
-								int LA49_0 = input.LA(1);
-								if ( ((LA49_0 >= '0' && LA49_0 <= '9')) ) {
-									alt49=1;
+								int alt50=2;
+								int LA50_0 = input.LA(1);
+								if ( ((LA50_0 >= '0' && LA50_0 <= '9')) ) {
+									alt50=1;
 								}
 
-								switch (alt49) {
+								switch (alt50) {
 								case 1 :
 									// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:
 									{
@@ -2455,11 +2471,11 @@ public class gcodeLexer extends Lexer {
 									break;
 
 								default :
-									if ( cnt49 >= 1 ) break loop49;
-									EarlyExitException eee = new EarlyExitException(49, input);
+									if ( cnt50 >= 1 ) break loop50;
+									EarlyExitException eee = new EarlyExitException(50, input);
 									throw eee;
 								}
-								cnt49++;
+								cnt50++;
 							}
 
 							}
@@ -2472,28 +2488,28 @@ public class gcodeLexer extends Lexer {
 
 			}
 
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:35: ( '.' ( DIGIT )+ )?
-			int alt53=2;
-			int LA53_0 = input.LA(1);
-			if ( (LA53_0=='.') ) {
-				alt53=1;
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:40: ( '.' ( DIGIT )+ )?
+			int alt54=2;
+			int LA54_0 = input.LA(1);
+			if ( (LA54_0=='.') ) {
+				alt54=1;
 			}
-			switch (alt53) {
+			switch (alt54) {
 				case 1 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:36: '.' ( DIGIT )+
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:41: '.' ( DIGIT )+
 					{
 					match('.'); 
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:40: ( DIGIT )+
-					int cnt52=0;
-					loop52:
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:45: ( DIGIT )+
+					int cnt53=0;
+					loop53:
 					while (true) {
-						int alt52=2;
-						int LA52_0 = input.LA(1);
-						if ( ((LA52_0 >= '0' && LA52_0 <= '9')) ) {
-							alt52=1;
+						int alt53=2;
+						int LA53_0 = input.LA(1);
+						if ( ((LA53_0 >= '0' && LA53_0 <= '9')) ) {
+							alt53=1;
 						}
 
-						switch (alt52) {
+						switch (alt53) {
 						case 1 :
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:
 							{
@@ -2509,11 +2525,11 @@ public class gcodeLexer extends Lexer {
 							break;
 
 						default :
-							if ( cnt52 >= 1 ) break loop52;
-							EarlyExitException eee = new EarlyExitException(52, input);
+							if ( cnt53 >= 1 ) break loop53;
+							EarlyExitException eee = new EarlyExitException(53, input);
 							throw eee;
 						}
-						cnt52++;
+						cnt53++;
 					}
 
 					}
@@ -2533,23 +2549,23 @@ public class gcodeLexer extends Lexer {
 	@Override
 	public void mTokens() throws RecognitionException {
 		// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:1:8: ( COMMENT | WS | EOL | G00 | G01 | G02 | G03 | G90 | G91 | G40 | G41 | G42 | G94 | G95 | G96 | G97 | OTHERG | X | Y | Z | I | J | K | M | S | E | F | T | EOF )
-		int alt54=29;
+		int alt55=29;
 		switch ( input.LA(1) ) {
 		case ';':
 			{
-			alt54=1;
+			alt55=1;
 			}
 			break;
 		case '\t':
 		case ' ':
 			{
-			alt54=2;
+			alt55=2;
 			}
 			break;
 		case '\n':
 		case '\r':
 			{
-			alt54=3;
+			alt55=3;
 			}
 			break;
 		case 'G':
@@ -2561,84 +2577,84 @@ public class gcodeLexer extends Lexer {
 				switch ( input.LA(3) ) {
 				case '0':
 					{
-					int LA54_24 = input.LA(4);
-					if ( ((LA54_24 >= '0' && LA54_24 <= '9')) ) {
-						alt54=17;
+					int LA55_24 = input.LA(4);
+					if ( ((LA55_24 >= '0' && LA55_24 <= '9')) ) {
+						alt55=17;
 					}
 
 					else {
-						alt54=8;
+						alt55=8;
 					}
 
 					}
 					break;
 				case '1':
 					{
-					int LA54_25 = input.LA(4);
-					if ( ((LA54_25 >= '0' && LA54_25 <= '9')) ) {
-						alt54=17;
+					int LA55_25 = input.LA(4);
+					if ( ((LA55_25 >= '0' && LA55_25 <= '9')) ) {
+						alt55=17;
 					}
 
 					else {
-						alt54=9;
+						alt55=9;
 					}
 
 					}
 					break;
 				case '4':
 					{
-					int LA54_26 = input.LA(4);
-					if ( ((LA54_26 >= '0' && LA54_26 <= '9')) ) {
-						alt54=17;
+					int LA55_26 = input.LA(4);
+					if ( ((LA55_26 >= '0' && LA55_26 <= '9')) ) {
+						alt55=17;
 					}
 
 					else {
-						alt54=13;
+						alt55=13;
 					}
 
 					}
 					break;
 				case '5':
 					{
-					int LA54_27 = input.LA(4);
-					if ( ((LA54_27 >= '0' && LA54_27 <= '9')) ) {
-						alt54=17;
+					int LA55_27 = input.LA(4);
+					if ( ((LA55_27 >= '0' && LA55_27 <= '9')) ) {
+						alt55=17;
 					}
 
 					else {
-						alt54=14;
+						alt55=14;
 					}
 
 					}
 					break;
 				case '6':
 					{
-					int LA54_28 = input.LA(4);
-					if ( ((LA54_28 >= '0' && LA54_28 <= '9')) ) {
-						alt54=17;
+					int LA55_28 = input.LA(4);
+					if ( ((LA55_28 >= '0' && LA55_28 <= '9')) ) {
+						alt55=17;
 					}
 
 					else {
-						alt54=15;
+						alt55=15;
 					}
 
 					}
 					break;
 				case '7':
 					{
-					int LA54_29 = input.LA(4);
-					if ( ((LA54_29 >= '0' && LA54_29 <= '9')) ) {
-						alt54=17;
+					int LA55_29 = input.LA(4);
+					if ( ((LA55_29 >= '0' && LA55_29 <= '9')) ) {
+						alt55=17;
 					}
 
 					else {
-						alt54=16;
+						alt55=16;
 					}
 
 					}
 					break;
 				default:
-					alt54=17;
+					alt55=17;
 				}
 				}
 				break;
@@ -2647,45 +2663,45 @@ public class gcodeLexer extends Lexer {
 				switch ( input.LA(3) ) {
 				case '0':
 					{
-					int LA54_30 = input.LA(4);
-					if ( ((LA54_30 >= '0' && LA54_30 <= '9')) ) {
-						alt54=17;
+					int LA55_30 = input.LA(4);
+					if ( ((LA55_30 >= '0' && LA55_30 <= '9')) ) {
+						alt55=17;
 					}
 
 					else {
-						alt54=10;
+						alt55=10;
 					}
 
 					}
 					break;
 				case '1':
 					{
-					int LA54_31 = input.LA(4);
-					if ( ((LA54_31 >= '0' && LA54_31 <= '9')) ) {
-						alt54=17;
+					int LA55_31 = input.LA(4);
+					if ( ((LA55_31 >= '0' && LA55_31 <= '9')) ) {
+						alt55=17;
 					}
 
 					else {
-						alt54=11;
+						alt55=11;
 					}
 
 					}
 					break;
 				case '2':
 					{
-					int LA54_32 = input.LA(4);
-					if ( ((LA54_32 >= '0' && LA54_32 <= '9')) ) {
-						alt54=17;
+					int LA55_32 = input.LA(4);
+					if ( ((LA55_32 >= '0' && LA55_32 <= '9')) ) {
+						alt55=17;
 					}
 
 					else {
-						alt54=12;
+						alt55=12;
 					}
 
 					}
 					break;
 				default:
-					alt54=17;
+					alt55=17;
 				}
 				}
 				break;
@@ -2694,52 +2710,52 @@ public class gcodeLexer extends Lexer {
 				switch ( input.LA(3) ) {
 				case '0':
 					{
-					int LA54_33 = input.LA(4);
-					if ( ((LA54_33 >= '0' && LA54_33 <= '9')) ) {
-						alt54=17;
+					int LA55_33 = input.LA(4);
+					if ( ((LA55_33 >= '0' && LA55_33 <= '9')) ) {
+						alt55=17;
 					}
 
 					else {
-						alt54=4;
+						alt55=4;
 					}
 
 					}
 					break;
 				case '1':
 					{
-					int LA54_35 = input.LA(4);
-					if ( ((LA54_35 >= '0' && LA54_35 <= '9')) ) {
-						alt54=17;
+					int LA55_35 = input.LA(4);
+					if ( ((LA55_35 >= '0' && LA55_35 <= '9')) ) {
+						alt55=17;
 					}
 
 					else {
-						alt54=5;
+						alt55=5;
 					}
 
 					}
 					break;
 				case '2':
 					{
-					int LA54_36 = input.LA(4);
-					if ( ((LA54_36 >= '0' && LA54_36 <= '9')) ) {
-						alt54=17;
+					int LA55_36 = input.LA(4);
+					if ( ((LA55_36 >= '0' && LA55_36 <= '9')) ) {
+						alt55=17;
 					}
 
 					else {
-						alt54=6;
+						alt55=6;
 					}
 
 					}
 					break;
 				case '3':
 					{
-					int LA54_37 = input.LA(4);
-					if ( ((LA54_37 >= '0' && LA54_37 <= '9')) ) {
-						alt54=17;
+					int LA55_37 = input.LA(4);
+					if ( ((LA55_37 >= '0' && LA55_37 <= '9')) ) {
+						alt55=17;
 					}
 
 					else {
-						alt54=7;
+						alt55=7;
 					}
 
 					}
@@ -2751,49 +2767,49 @@ public class gcodeLexer extends Lexer {
 				case '8':
 				case '9':
 					{
-					alt54=17;
+					alt55=17;
 					}
 					break;
 				default:
-					alt54=4;
+					alt55=4;
 				}
 				}
 				break;
 			case '1':
 				{
-				int LA54_20 = input.LA(3);
-				if ( ((LA54_20 >= '0' && LA54_20 <= '9')) ) {
-					alt54=17;
+				int LA55_20 = input.LA(3);
+				if ( ((LA55_20 >= '0' && LA55_20 <= '9')) ) {
+					alt55=17;
 				}
 
 				else {
-					alt54=5;
+					alt55=5;
 				}
 
 				}
 				break;
 			case '2':
 				{
-				int LA54_21 = input.LA(3);
-				if ( ((LA54_21 >= '0' && LA54_21 <= '9')) ) {
-					alt54=17;
+				int LA55_21 = input.LA(3);
+				if ( ((LA55_21 >= '0' && LA55_21 <= '9')) ) {
+					alt55=17;
 				}
 
 				else {
-					alt54=6;
+					alt55=6;
 				}
 
 				}
 				break;
 			case '3':
 				{
-				int LA54_22 = input.LA(3);
-				if ( ((LA54_22 >= '0' && LA54_22 <= '9')) ) {
-					alt54=17;
+				int LA55_22 = input.LA(3);
+				if ( ((LA55_22 >= '0' && LA55_22 <= '9')) ) {
+					alt55=17;
 				}
 
 				else {
-					alt54=7;
+					alt55=7;
 				}
 
 				}
@@ -2803,7 +2819,7 @@ public class gcodeLexer extends Lexer {
 			case '7':
 			case '8':
 				{
-				alt54=17;
+				alt55=17;
 				}
 				break;
 			default:
@@ -2811,7 +2827,7 @@ public class gcodeLexer extends Lexer {
 				try {
 					input.consume();
 					NoViableAltException nvae =
-						new NoViableAltException("", 54, 4, input);
+						new NoViableAltException("", 55, 4, input);
 					throw nvae;
 				} finally {
 					input.rewind(nvaeMark);
@@ -2822,80 +2838,80 @@ public class gcodeLexer extends Lexer {
 		case 'X':
 		case 'x':
 			{
-			alt54=18;
+			alt55=18;
 			}
 			break;
 		case 'Y':
 		case 'y':
 			{
-			alt54=19;
+			alt55=19;
 			}
 			break;
 		case 'Z':
 		case 'z':
 			{
-			alt54=20;
+			alt55=20;
 			}
 			break;
 		case 'I':
 		case 'i':
 			{
-			alt54=21;
+			alt55=21;
 			}
 			break;
 		case 'J':
 		case 'j':
 			{
-			alt54=22;
+			alt55=22;
 			}
 			break;
 		case 'K':
 		case 'k':
 			{
-			alt54=23;
+			alt55=23;
 			}
 			break;
 		case 'M':
 		case 'm':
 			{
-			alt54=24;
+			alt55=24;
 			}
 			break;
 		case 'S':
 		case 's':
 			{
-			alt54=25;
+			alt55=25;
 			}
 			break;
 		case 'E':
 		case 'e':
 			{
-			alt54=26;
+			alt55=26;
 			}
 			break;
 		case 'F':
 		case 'f':
 			{
-			alt54=27;
+			alt55=27;
 			}
 			break;
 		case 'T':
 		case 't':
 			{
-			alt54=28;
+			alt55=28;
 			}
 			break;
 		case '<':
 			{
-			alt54=29;
+			alt55=29;
 			}
 			break;
 		default:
 			NoViableAltException nvae =
-				new NoViableAltException("", 54, 0, input);
+				new NoViableAltException("", 55, 0, input);
 			throw nvae;
 		}
-		switch (alt54) {
+		switch (alt55) {
 			case 1 :
 				// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:1:10: COMMENT
 				{

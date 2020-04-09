@@ -186,7 +186,9 @@ public class ParserHandler {
                     break;
                 case "30":
                     translation.append("\tEnd of Program\n");
+                    checkTranslationFormat();
                     translation.append("\tFinal tool position: [x=" + xPrevious + ", y=" + yPrevious + ", z=" + zPrevious + "]\n");
+                    checkTranslationFormat();
                     translation.append("\t---------------------------------------------------------------------\n");
                     break;
                 default:

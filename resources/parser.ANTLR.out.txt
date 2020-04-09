@@ -1,25 +1,280 @@
-1)	/* Example */
-2)	Absolute programming
-	Change tool with the one at position 02 with default configuration
-3)	Measure unit for feed rate instruction set to [mm/rev]
-4)	Measure unit for speed rate instruction set to [rev/min]
-	Speed rate value = 1200
-	Precision feed rate value  = 15
-	Feed rate value  = 0.2
-	Tool clockwise rotation
-	Activate cooling lubrificant
-5)	Rapid positioning to [x=30.0, y=50.0, z=1.0]
-6)	Linear interpolation positioning to [x=30.0, y=50.0, z=21.0]
-7)	Rapid positioning to [x=30.0, y=50.0, z=10.0]
-8)	Rapid positioning to [x=30.0, y=50.0, z=100.0]
-	Stop tool
-	Deactivate cooling lubrificant
-9)	Circular clockwise interpolation to [x=12.4, y=10.0, z=21.0] with center in [x=20.0, y=30.0]
-10)	Linear interpolation positioning to [x=1240.0, y=10.0, z=21.0]
-11)	Rapid positioning to [x=1240.0, y=10.0, z=1.0]
-12)	Rapid positioning to [x=1240.0, y=10.0, z=100.0]
-	Stop tool
-	Deactivate cooling lubrificant
-	End of Program
-	Final tool position: [x=1240.0, y=10.0, z=100.0]
-	---------------------------------------------------------------------
+1)	/* Portion of code relative to the piece "crankshaft.png" */
+2)	/* FLAVOR:Marlin */
+3)	/* TIME:23843 */
+4)	/* Filament used: 28.8249m */
+5)	/* Layer height: 0.2 */
+6)	/* Generated with Cura_SteamEngine 4.0.0 */
+7)	Linear interpolation positioning to [z=15.0]
+	Feed rate value  = 6000
+8)	/* Prime the extruder */
+9)	Precision feed rate value  = 3
+	Feed rate value  = 200
+10)	Precision feed rate value  = -2.5
+	Feed rate value  = 2400
+11)	/* LAYER_COUNT:300 */
+12)	/* LAYER:0 */
+13)	Rapid positioning to [x=139.816, y=81.17, z=0.3]
+	Feed rate value  = 3600
+14)	/* TYPE:SKIRT */
+15)	Precision feed rate value  = 0
+	Feed rate value  = 2400
+16)	Linear interpolation positioning to [x=140.165, y=80.725]
+	Precision feed rate value  = 0.02821
+	Feed rate value  = 1800
+17)	Rapid positioning to [x=139.816, y=81.17, z=0.3]
+	Feed rate value  = 3600
+18)	Linear interpolation positioning to [x=140.574, y=80.335]
+	Precision feed rate value  = 0.05641
+19)	Linear interpolation positioning to [x=141.034, y=80.005]
+	Precision feed rate value  = 0.08465
+20)	Linear interpolation positioning to [x=141.535, y=79.744]
+	Precision feed rate value  = 0.11284
+21)	Linear interpolation positioning to [x=142.068, y=79.557]
+	Precision feed rate value  = 0.14102
+22)	Linear interpolation positioning to [x=142.623, y=79.446]
+	Precision feed rate value  = 0.16925
+23)	Linear interpolation positioning to [x=143.152, y=79.414]
+	Precision feed rate value  = 0.1957
+24)	Linear interpolation positioning to [x=154.289, y=79.485]
+	Precision feed rate value  = 0.75133
+25)	Linear interpolation positioning to [x=157.332, y=79.406]
+	Precision feed rate value  = 0.9032
+26)	Linear interpolation positioning to [x=157.464, y=79.405]
+	Precision feed rate value  = 0.90979
+27)	Linear interpolation positioning to [x=168.292, y=79.484]
+	Precision feed rate value  = 1.45001
+28)	Linear interpolation positioning to [x=171.332, y=79.406]
+	Precision feed rate value  = 1.60173
+29)	Linear interpolation positioning to [x=171.442, y=79.405]
+	Precision feed rate value  = 1.60722
+30)	Linear interpolation positioning to [x=176.89, y=79.415]
+	Precision feed rate value  = 1.87902
+31)	Linear interpolation positioning to [x=177.454, y=79.456]
+	Precision feed rate value  = 1.90723
+32)	Linear interpolation positioning to [x=178.007, y=79.576]
+	Precision feed rate value  = 1.93546
+33)	Linear interpolation positioning to [x=178.537, y=79.773]
+	Precision feed rate value  = 1.96367
+34)	Linear interpolation positioning to [x=179.034, y=80.042]
+	Precision feed rate value  = 1.99187
+35)	Linear interpolation positioning to [x=179.488, y=80.379]
+	Precision feed rate value  = 2.02007
+36)	Linear interpolation positioning to [x=179.89, y=80.777]
+	Precision feed rate value  = 2.0483
+37)	Linear interpolation positioning to [x=180.231, y=81.227]
+	Precision feed rate value  = 2.07646
+38)	Linear interpolation positioning to [x=180.507, y=81.721]
+	Precision feed rate value  = 2.1047
+39)	Linear interpolation positioning to [x=180.709, y=82.249]
+	Precision feed rate value  = 2.1329
+40)	Linear interpolation positioning to [x=180.835, y=82.8]
+	Precision feed rate value  = 2.1611
+41)	Linear interpolation positioning to [x=180.882, y=83.306]
+	Precision feed rate value  = 2.18645
+42)	Linear interpolation positioning to [x=181.048, y=89.39]
+	Precision feed rate value  = 2.4901
+43)	Linear interpolation positioning to [x=181.508, y=94.804]
+	Precision feed rate value  = 2.76118
+44)	Linear interpolation positioning to [x=182.273, y=100.167]
+	Precision feed rate value  = 3.03145
+45)	Linear interpolation positioning to [x=183.598, y=106.625]
+	Precision feed rate value  = 3.36035
+46)	Linear interpolation positioning to [x=183.68, y=107.457]
+	Precision feed rate value  = 3.40206
+47)	Linear interpolation positioning to [x=183.649, y=111.905]
+	Precision feed rate value  = 3.62398
+48)	Linear interpolation positioning to [x=183.83, y=117.367]
+	Precision feed rate value  = 3.89662
+49)	Linear interpolation positioning to [x=184.318, y=122.781]
+	Precision feed rate value  = 4.16783
+50)	Linear interpolation positioning to [x=185.105, y=128.122]
+	Precision feed rate value  = 4.43717
+51)	Linear interpolation positioning to [x=186.714, y=135.58]
+	Precision feed rate value  = 4.81781
+52)	Linear interpolation positioning to [x=186.804, y=136.402]
+	Precision feed rate value  = 4.85906
+53)	Linear interpolation positioning to [x=186.823, y=139.934]
+	Precision feed rate value  = 5.03528
+54)	Linear interpolation positioning to [x=186.817, y=140.18]
+	Precision feed rate value  = 5.04755
+55)	Linear interpolation positioning to [x=186.71, y=142.079]
+	Precision feed rate value  = 5.14245
+56)	Linear interpolation positioning to [x=186.6, y=146.795]
+	Precision feed rate value  = 5.37779
+57)	Linear interpolation positioning to [x=186.753, y=152.21]
+	Precision feed rate value  = 5.64806
+58)	Linear interpolation positioning to [x=187.215, y=157.639]
+	Precision feed rate value  = 5.91989
+59)	Linear interpolation positioning to [x=187.984, y=163.034]
+	Precision feed rate value  = 6.19177
+60)	Linear interpolation positioning to [x=188.631, y=166.501]
+	Precision feed rate value  = 6.36772
+61)	Linear interpolation positioning to [x=188.699, y=167.291]
+	Precision feed rate value  = 6.40728
+62)	Linear interpolation positioning to [x=188.622, y=172.707]
+	Precision feed rate value  = 6.67751
+63)	Linear interpolation positioning to [x=188.693, y=180.816]
+	Precision feed rate value  = 7.08209
+64)	Linear interpolation positioning to [x=188.658, y=181.38]
+	Precision feed rate value  = 7.11028
+65)	Linear interpolation positioning to [x=188.532, y=181.975]
+	Precision feed rate value  = 7.14062
+66)	Linear interpolation positioning to [x=187.586, y=185.206]
+	Precision feed rate value  = 7.30859
+67)	Linear interpolation positioning to [x=186.278, y=190.553]
+	Precision feed rate value  = 7.58321
+68)	Linear interpolation positioning to [x=185.757, y=193.16]
+	Precision feed rate value  = 7.71585
+69)	Linear interpolation positioning to [x=184.921, y=198.523]
+	Precision feed rate value  = 7.98664
+70)	Linear interpolation positioning to [x=184.386, y=203.939]
+	Precision feed rate value  = 8.25816
+71)	Linear interpolation positioning to [x=184.133, y=210.722]
+	Precision feed rate value  = 8.5968
+72)	Linear interpolation positioning to [x=184.072, y=211.284]
+	Precision feed rate value  = 8.62501
+73)	Linear interpolation positioning to [x=183.933, y=211.832]
+	Precision feed rate value  = 8.65321
+74)	Linear interpolation positioning to [x=183.717, y=212.355]
+	Precision feed rate value  = 8.68144
+75)	Linear interpolation positioning to [x=183.269, y=213.06]
+	Precision feed rate value  = 8.72312
+76)	Linear interpolation positioning to [x=180.626, y=216.39]
+	Precision feed rate value  = 8.93522
+77)	Linear interpolation positioning to [x=179.039, y=218.536]
+	Precision feed rate value  = 9.06838
+78)	Linear interpolation positioning to [x=177.493, y=220.756]
+	Precision feed rate value  = 9.20335
+79)	Linear interpolation positioning to [x=174.55, y=225.39]
+	Precision feed rate value  = 9.47722
+80)	Linear interpolation positioning to [x=172.498, y=228.907]
+	Precision feed rate value  = 9.68037
+81)	Linear interpolation positioning to [x=172.15, y=229.41]
+	Precision feed rate value  = 9.71088
+82)	Linear interpolation positioning to [x=168.887, y=233.435]
+	Precision feed rate value  = 9.96939
+83)	Linear interpolation positioning to [x=165.812, y=237.575]
+	Precision feed rate value  = 10.22667
+84)	Linear interpolation positioning to [x=165.444, y=238.004]
+	Precision feed rate value  = 10.25487
+85)	Linear interpolation positioning to [x=165.018, y=238.377]
+	Precision feed rate value  = 10.28312
+86)	Linear interpolation positioning to [x=164.545, y=238.686]
+	Precision feed rate value  = 10.31131
+87)	Linear interpolation positioning to [x=164.033, y=238.925]
+	Precision feed rate value  = 10.3395
+88)	Linear interpolation positioning to [x=163.492, y=239.09]
+	Precision feed rate value  = 10.36772
+89)	Linear interpolation positioning to [x=162.933, y=239.176]
+	Precision feed rate value  = 10.39593
+90)	Linear interpolation positioning to [x=162.601, y=239.19]
+	Precision feed rate value  = 10.41251
+91)	Linear interpolation positioning to [x=157.4, y=239.19]
+	Precision feed rate value  = 10.67199
+92)	Linear interpolation positioning to [x=156.836, y=239.15]
+	Precision feed rate value  = 10.7002
+93)	Linear interpolation positioning to [x=156.283, y=239.031]
+	Precision feed rate value  = 10.72842
+94)	Linear interpolation positioning to [x=155.753, y=238.835]
+	Precision feed rate value  = 10.75661
+95)	Linear interpolation positioning to [x=155.256, y=238.567]
+	Precision feed rate value  = 10.78478
+96)	Linear interpolation positioning to [x=154.801, y=238.231]
+	Precision feed rate value  = 10.813
+97)	Linear interpolation positioning to [x=154.398, y=237.834]
+	Precision feed rate value  = 10.84122
+98)	Linear interpolation positioning to [x=154.183, y=237.567]
+	Precision feed rate value  = 10.85833
+99)	Linear interpolation positioning to [x=152.506, y=235.298]
+		Precision feed rate value  = 10.99909
+100)	Linear interpolation positioning to [x=149.121, y=230.92]
+		Precision feed rate value  = 11.27518
+101)	Linear interpolation positioning to [x=147.718, y=229.24]
+		Precision feed rate value  = 11.38438
+102)	Linear interpolation positioning to [x=147.618, y=229.116]
+		Precision feed rate value  = 11.39233
+103)	Linear interpolation positioning to [x=143.062, y=223.198]
+		Precision feed rate value  = 11.76494
+104)	Linear interpolation positioning to [x=139.496, y=219.145]
+		Precision feed rate value  = 12.03427
+105)	Linear interpolation positioning to [x=134.597, y=214.152]
+		Precision feed rate value  = 12.38325
+106)	Linear interpolation positioning to [x=134.23, y=213.721]
+		Precision feed rate value  = 12.41149
+107)	Linear interpolation positioning to [x=133.928, y=213.243]
+		Precision feed rate value  = 12.4397
+108)	Linear interpolation positioning to [x=133.697, y=212.728]
+		Precision feed rate value  = 12.46786
+109)	Linear interpolation positioning to [x=133.54, y=212.184]
+		Precision feed rate value  = 12.49611
+110)	Linear interpolation positioning to [x=133.47, y=211.725]
+		Precision feed rate value  = 12.51927
+111)	Linear interpolation positioning to [x=133.409, y=211.077]
+		Precision feed rate value  = 12.55174
+112)	Linear interpolation positioning to [x=133.391, y=210.652]
+		Precision feed rate value  = 12.57297
+113)	Linear interpolation positioning to [x=133.484, y=203.165]
+		Precision feed rate value  = 12.94652
+114)	Linear interpolation positioning to [x=133.428, y=200.948]
+		Precision feed rate value  = 13.05717
+115)	Linear interpolation positioning to [x=133.429, y=200.948]
+		Precision feed rate value  = 13.05722
+116)	Linear interpolation positioning to [x=133.321, y=197.051]
+		Precision feed rate value  = 13.25171
+117)	Linear interpolation positioning to [x=132.923, y=191.611]
+		Precision feed rate value  = 13.52384
+118)	Linear interpolation positioning to [x=132.22, y=186.216]
+		Precision feed rate value  = 13.79527
+119)	Linear interpolation positioning to [x=131.376, y=181.576]
+		Precision feed rate value  = 14.03056
+120)	Linear interpolation positioning to [x=131.311, y=180.814]
+		Precision feed rate value  = 14.06872
+121)	Linear interpolation positioning to [x=131.374, y=175.389]
+		Precision feed rate value  = 14.33939
+122)	Linear interpolation positioning to [x=131.303, y=167.216]
+		Precision feed rate value  = 14.74716
+123)	Linear interpolation positioning to [x=131.338, y=166.651]
+		Precision feed rate value  = 14.7754
+124)	Linear interpolation positioning to [x=131.45, y=166.108]
+		Precision feed rate value  = 14.80306
+125)	Linear interpolation positioning to [x=133.078, y=160.259]
+		Precision feed rate value  = 15.10596
+126)	Linear interpolation positioning to [x=134.238, y=154.892]
+		Precision feed rate value  = 15.3799
+127)	Linear interpolation positioning to [x=134.682, y=152.292]
+		Precision feed rate value  = 15.5115
+128)	Linear interpolation positioning to [x=135.376, y=146.888]
+		Precision feed rate value  = 15.78332
+129)	Linear interpolation positioning to [x=135.762, y=141.452]
+		Precision feed rate value  = 16.0552
+130)	Linear interpolation positioning to [x=135.865, y=137.342]
+		Precision feed rate value  = 16.26032
+131)	Linear interpolation positioning to [x=135.878, y=137.111]
+		Precision feed rate value  = 16.27186
+132)	Linear interpolation positioning to [x=136.339, y=131.556]
+		Precision feed rate value  = 16.54995
+133)	Linear interpolation positioning to [x=136.481, y=126.107]
+		Precision feed rate value  = 16.8219
+134)	Linear interpolation positioning to [x=136.316, y=119.932]
+		Precision feed rate value  = 17.13008
+135)	Linear interpolation positioning to [x=136.316, y=119.756]
+		Precision feed rate value  = 17.13886
+136)	Linear interpolation positioning to [x=136.428, y=113.297]
+		Precision feed rate value  = 17.46115
+137)	Linear interpolation positioning to [x=136.32, y=107.514]
+		Precision feed rate value  = 17.74971
+138)	Linear interpolation positioning to [x=136.349, y=106.95]
+		Precision feed rate value  = 17.77789
+139)	Linear interpolation positioning to [x=136.403, y=106.625]
+		Precision feed rate value  = 17.79433
+140)	Linear interpolation positioning to [x=137.658, y=100.598]
+		Precision feed rate value  = 18.10146
+141)	Linear interpolation positioning to [x=138.446, y=95.242]
+		Precision feed rate value  = 18.37155
+142)	Rapid positioning to [z=100.0]
+		Stop tool
+		Deactivate cooling lubrificant
+		End of Program
+		Final tool position: [x=138.446, y=95.242, z=100.0]
+		---------------------------------------------------------------------
+143)	/* End of Gcode */
