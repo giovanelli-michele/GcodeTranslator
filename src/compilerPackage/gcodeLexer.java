@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g 2020-04-03 12:11:50
+// $ANTLR 3.5.1 C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g 2020-04-09 10:36:56
 
   // Questo è il codice inserito fuori dalla classe del Lexer
   package compilerPackage;
@@ -66,11 +66,11 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = COMMENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:170:12: ( ';' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:170:16: ';' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:174:12: ( ';' (~ ( '\\n' | '\\r' ) )* )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:174:16: ';' (~ ( '\\n' | '\\r' ) )*
 			{
 			match(';'); 
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:170:21: (~ ( '\\n' | '\\r' ) )*
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:174:21: (~ ( '\\n' | '\\r' ) )*
 			loop1:
 			while (true) {
 				int alt1=2;
@@ -99,24 +99,6 @@ public class gcodeLexer extends Lexer {
 				}
 			}
 
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:170:35: ( '\\r' )?
-			int alt2=2;
-			int LA2_0 = input.LA(1);
-			if ( (LA2_0=='\r') ) {
-				alt2=1;
-			}
-			switch (alt2) {
-				case 1 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:170:35: '\\r'
-					{
-					match('\r'); 
-					}
-					break;
-
-			}
-
-			match('\n'); 
-			_channel=HIDDEN;
 			}
 
 			state.type = _type;
@@ -133,8 +115,8 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:172:5: ( ( ' ' | '\\t' ) )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:172:9: ( ' ' | '\\t' )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:176:5: ( ( ' ' | '\\t' ) )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:176:9: ( ' ' | '\\t' )
 			{
 			if ( input.LA(1)=='\t'||input.LA(1)==' ' ) {
 				input.consume();
@@ -161,39 +143,39 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = EOL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:174:5: ( ( '\\r' ( '\\n' )? | '\\n' ) )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:174:7: ( '\\r' ( '\\n' )? | '\\n' )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:178:5: ( ( '\\r' ( '\\n' )? | '\\n' ) )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:178:7: ( '\\r' ( '\\n' )? | '\\n' )
 			{
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:174:7: ( '\\r' ( '\\n' )? | '\\n' )
-			int alt4=2;
-			int LA4_0 = input.LA(1);
-			if ( (LA4_0=='\r') ) {
-				alt4=1;
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:178:7: ( '\\r' ( '\\n' )? | '\\n' )
+			int alt3=2;
+			int LA3_0 = input.LA(1);
+			if ( (LA3_0=='\r') ) {
+				alt3=1;
 			}
-			else if ( (LA4_0=='\n') ) {
-				alt4=2;
+			else if ( (LA3_0=='\n') ) {
+				alt3=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 4, 0, input);
+					new NoViableAltException("", 3, 0, input);
 				throw nvae;
 			}
 
-			switch (alt4) {
+			switch (alt3) {
 				case 1 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:174:8: '\\r' ( '\\n' )?
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:178:8: '\\r' ( '\\n' )?
 					{
 					match('\r'); 
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:174:13: ( '\\n' )?
-					int alt3=2;
-					int LA3_0 = input.LA(1);
-					if ( (LA3_0=='\n') ) {
-						alt3=1;
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:178:13: ( '\\n' )?
+					int alt2=2;
+					int LA2_0 = input.LA(1);
+					if ( (LA2_0=='\n') ) {
+						alt2=1;
 					}
-					switch (alt3) {
+					switch (alt2) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:174:13: '\\n'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:178:13: '\\n'
 							{
 							match('\n'); 
 							}
@@ -204,7 +186,7 @@ public class gcodeLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:174:21: '\\n'
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:178:21: '\\n'
 					{
 					match('\n'); 
 					}
@@ -228,8 +210,8 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = G00;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:177:5: ( ( 'g' | 'G' ) ( ( '0' )? '0' ) )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:177:7: ( 'g' | 'G' ) ( ( '0' )? '0' )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:181:5: ( ( 'g' | 'G' ) ( ( '0' )? '0' ) )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:181:7: ( 'g' | 'G' ) ( ( '0' )? '0' )
 			{
 			if ( input.LA(1)=='G'||input.LA(1)=='g' ) {
 				input.consume();
@@ -239,21 +221,21 @@ public class gcodeLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:177:17: ( ( '0' )? '0' )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:177:18: ( '0' )? '0'
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:181:17: ( ( '0' )? '0' )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:181:18: ( '0' )? '0'
 			{
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:177:18: ( '0' )?
-			int alt5=2;
-			int LA5_0 = input.LA(1);
-			if ( (LA5_0=='0') ) {
-				int LA5_1 = input.LA(2);
-				if ( (LA5_1=='0') ) {
-					alt5=1;
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:181:18: ( '0' )?
+			int alt4=2;
+			int LA4_0 = input.LA(1);
+			if ( (LA4_0=='0') ) {
+				int LA4_1 = input.LA(2);
+				if ( (LA4_1=='0') ) {
+					alt4=1;
 				}
 			}
-			switch (alt5) {
+			switch (alt4) {
 				case 1 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:177:18: '0'
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:181:18: '0'
 					{
 					match('0'); 
 					}
@@ -280,8 +262,8 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = G01;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:178:5: ( ( 'g' | 'G' ) ( ( '0' )? '1' ) )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:178:7: ( 'g' | 'G' ) ( ( '0' )? '1' )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:182:5: ( ( 'g' | 'G' ) ( ( '0' )? '1' ) )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:182:7: ( 'g' | 'G' ) ( ( '0' )? '1' )
 			{
 			if ( input.LA(1)=='G'||input.LA(1)=='g' ) {
 				input.consume();
@@ -291,18 +273,18 @@ public class gcodeLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:178:17: ( ( '0' )? '1' )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:178:18: ( '0' )? '1'
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:182:17: ( ( '0' )? '1' )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:182:18: ( '0' )? '1'
 			{
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:178:18: ( '0' )?
-			int alt6=2;
-			int LA6_0 = input.LA(1);
-			if ( (LA6_0=='0') ) {
-				alt6=1;
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:182:18: ( '0' )?
+			int alt5=2;
+			int LA5_0 = input.LA(1);
+			if ( (LA5_0=='0') ) {
+				alt5=1;
 			}
-			switch (alt6) {
+			switch (alt5) {
 				case 1 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:178:18: '0'
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:182:18: '0'
 					{
 					match('0'); 
 					}
@@ -329,8 +311,8 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = G02;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:179:5: ( ( 'g' | 'G' ) ( ( '0' )? '2' ) )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:179:7: ( 'g' | 'G' ) ( ( '0' )? '2' )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:183:5: ( ( 'g' | 'G' ) ( ( '0' )? '2' ) )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:183:7: ( 'g' | 'G' ) ( ( '0' )? '2' )
 			{
 			if ( input.LA(1)=='G'||input.LA(1)=='g' ) {
 				input.consume();
@@ -340,18 +322,18 @@ public class gcodeLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:179:17: ( ( '0' )? '2' )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:179:18: ( '0' )? '2'
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:183:17: ( ( '0' )? '2' )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:183:18: ( '0' )? '2'
 			{
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:179:18: ( '0' )?
-			int alt7=2;
-			int LA7_0 = input.LA(1);
-			if ( (LA7_0=='0') ) {
-				alt7=1;
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:183:18: ( '0' )?
+			int alt6=2;
+			int LA6_0 = input.LA(1);
+			if ( (LA6_0=='0') ) {
+				alt6=1;
 			}
-			switch (alt7) {
+			switch (alt6) {
 				case 1 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:179:18: '0'
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:183:18: '0'
 					{
 					match('0'); 
 					}
@@ -378,8 +360,8 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = G03;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:180:5: ( ( 'g' | 'G' ) ( ( '0' )? '3' ) )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:180:7: ( 'g' | 'G' ) ( ( '0' )? '3' )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:184:5: ( ( 'g' | 'G' ) ( ( '0' )? '3' ) )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:184:7: ( 'g' | 'G' ) ( ( '0' )? '3' )
 			{
 			if ( input.LA(1)=='G'||input.LA(1)=='g' ) {
 				input.consume();
@@ -389,18 +371,18 @@ public class gcodeLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:180:17: ( ( '0' )? '3' )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:180:18: ( '0' )? '3'
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:184:17: ( ( '0' )? '3' )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:184:18: ( '0' )? '3'
 			{
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:180:18: ( '0' )?
-			int alt8=2;
-			int LA8_0 = input.LA(1);
-			if ( (LA8_0=='0') ) {
-				alt8=1;
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:184:18: ( '0' )?
+			int alt7=2;
+			int LA7_0 = input.LA(1);
+			if ( (LA7_0=='0') ) {
+				alt7=1;
 			}
-			switch (alt8) {
+			switch (alt7) {
 				case 1 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:180:18: '0'
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:184:18: '0'
 					{
 					match('0'); 
 					}
@@ -427,8 +409,8 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = G90;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:181:5: ( ( 'g' | 'G' ) '90' )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:181:7: ( 'g' | 'G' ) '90'
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:185:5: ( ( 'g' | 'G' ) '90' )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:185:7: ( 'g' | 'G' ) '90'
 			{
 			if ( input.LA(1)=='G'||input.LA(1)=='g' ) {
 				input.consume();
@@ -456,8 +438,8 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = G91;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:182:5: ( ( 'g' | 'G' ) '91' )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:182:7: ( 'g' | 'G' ) '91'
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:186:5: ( ( 'g' | 'G' ) '91' )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:186:7: ( 'g' | 'G' ) '91'
 			{
 			if ( input.LA(1)=='G'||input.LA(1)=='g' ) {
 				input.consume();
@@ -485,8 +467,8 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = G40;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:185:5: ( ( 'g' | 'G' ) '40' )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:185:7: ( 'g' | 'G' ) '40'
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:189:5: ( ( 'g' | 'G' ) '40' )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:189:7: ( 'g' | 'G' ) '40'
 			{
 			if ( input.LA(1)=='G'||input.LA(1)=='g' ) {
 				input.consume();
@@ -514,8 +496,8 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = G41;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:186:5: ( ( 'g' | 'G' ) '41' )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:186:7: ( 'g' | 'G' ) '41'
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:190:5: ( ( 'g' | 'G' ) '41' )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:190:7: ( 'g' | 'G' ) '41'
 			{
 			if ( input.LA(1)=='G'||input.LA(1)=='g' ) {
 				input.consume();
@@ -543,8 +525,8 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = G42;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:187:5: ( ( 'g' | 'G' ) '42' )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:187:7: ( 'g' | 'G' ) '42'
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:191:5: ( ( 'g' | 'G' ) '42' )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:191:7: ( 'g' | 'G' ) '42'
 			{
 			if ( input.LA(1)=='G'||input.LA(1)=='g' ) {
 				input.consume();
@@ -572,8 +554,8 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = G94;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:190:5: ( ( 'g' | 'G' ) '94' )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:190:7: ( 'g' | 'G' ) '94'
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:194:5: ( ( 'g' | 'G' ) '94' )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:194:7: ( 'g' | 'G' ) '94'
 			{
 			if ( input.LA(1)=='G'||input.LA(1)=='g' ) {
 				input.consume();
@@ -601,8 +583,8 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = G95;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:191:5: ( ( 'g' | 'G' ) '95' )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:191:7: ( 'g' | 'G' ) '95'
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:195:5: ( ( 'g' | 'G' ) '95' )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:195:7: ( 'g' | 'G' ) '95'
 			{
 			if ( input.LA(1)=='G'||input.LA(1)=='g' ) {
 				input.consume();
@@ -630,8 +612,8 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = G96;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:192:5: ( ( 'g' | 'G' ) '96' )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:192:7: ( 'g' | 'G' ) '96'
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:196:5: ( ( 'g' | 'G' ) '96' )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:196:7: ( 'g' | 'G' ) '96'
 			{
 			if ( input.LA(1)=='G'||input.LA(1)=='g' ) {
 				input.consume();
@@ -659,8 +641,8 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = G97;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:193:5: ( ( 'g' | 'G' ) '97' )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:193:7: ( 'g' | 'G' ) '97'
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:197:5: ( ( 'g' | 'G' ) '97' )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:197:7: ( 'g' | 'G' ) '97'
 			{
 			if ( input.LA(1)=='G'||input.LA(1)=='g' ) {
 				input.consume();
@@ -688,8 +670,8 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = OTHERG;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:197:9: ( ( 'g' | 'G' ) ( ( '0' ( '0' )+ '0' ) | ( '0' ( '0' )+ '1' ) | ( '0' ( '0' )+ '2' ) | ( '0' ( '0' )+ '3' ) | ( ( '0' )* '4' ) | ( ( '0' )* '5' ) | ( ( '0' )* '6' ) | ( ( '0' )* '7' ) | ( ( '0' )* '8' ) | ( ( '0' )* '9' ) | ( '0' )* '1' DIGIT | ( '0' )* '2' DIGIT | ( '0' )* '3' DIGIT | ( '0' )+ '40' | ( '0' )+ '41' | ( '0' )+ '42' | ( '0' )* '43' | ( '0' )* '44' | ( '0' )* '45' | ( '0' )* '46' | ( '0' )* '47' | ( '0' )* '48' | ( '0' )* '49' | ( '0' )* '5' DIGIT | ( '0' )* '6' DIGIT | ( '0' )* '7' DIGIT | ( '0' )* '8' DIGIT | ( '0' )+ '90' | ( '0' )+ '91' | ( '0' )* '92' | ( '0' )* '93' | ( '0' )+ '94' | ( '0' )+ '95' | ( '0' )+ '96' | ( '0' )+ '97' | ( '0' )* '98' | ( '0' )* '99' | D0GIT DIGIT ( DIGIT )+ ) )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:197:11: ( 'g' | 'G' ) ( ( '0' ( '0' )+ '0' ) | ( '0' ( '0' )+ '1' ) | ( '0' ( '0' )+ '2' ) | ( '0' ( '0' )+ '3' ) | ( ( '0' )* '4' ) | ( ( '0' )* '5' ) | ( ( '0' )* '6' ) | ( ( '0' )* '7' ) | ( ( '0' )* '8' ) | ( ( '0' )* '9' ) | ( '0' )* '1' DIGIT | ( '0' )* '2' DIGIT | ( '0' )* '3' DIGIT | ( '0' )+ '40' | ( '0' )+ '41' | ( '0' )+ '42' | ( '0' )* '43' | ( '0' )* '44' | ( '0' )* '45' | ( '0' )* '46' | ( '0' )* '47' | ( '0' )* '48' | ( '0' )* '49' | ( '0' )* '5' DIGIT | ( '0' )* '6' DIGIT | ( '0' )* '7' DIGIT | ( '0' )* '8' DIGIT | ( '0' )+ '90' | ( '0' )+ '91' | ( '0' )* '92' | ( '0' )* '93' | ( '0' )+ '94' | ( '0' )+ '95' | ( '0' )+ '96' | ( '0' )+ '97' | ( '0' )* '98' | ( '0' )* '99' | D0GIT DIGIT ( DIGIT )+ )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:201:9: ( ( 'g' | 'G' ) ( ( '0' ( '0' )+ '0' ) | ( '0' ( '0' )+ '1' ) | ( '0' ( '0' )+ '2' ) | ( '0' ( '0' )+ '3' ) | ( ( '0' )* '4' ) | ( ( '0' )* '5' ) | ( ( '0' )* '6' ) | ( ( '0' )* '7' ) | ( ( '0' )* '8' ) | ( ( '0' )* '9' ) | ( '0' )* '1' DIGIT | ( '0' )* '2' DIGIT | ( '0' )* '3' DIGIT | ( '0' )+ '40' | ( '0' )+ '41' | ( '0' )+ '42' | ( '0' )* '43' | ( '0' )* '44' | ( '0' )* '45' | ( '0' )* '46' | ( '0' )* '47' | ( '0' )* '48' | ( '0' )* '49' | ( '0' )* '5' DIGIT | ( '0' )* '6' DIGIT | ( '0' )* '7' DIGIT | ( '0' )* '8' DIGIT | ( '0' )+ '90' | ( '0' )+ '91' | ( '0' )* '92' | ( '0' )* '93' | ( '0' )+ '94' | ( '0' )+ '95' | ( '0' )+ '96' | ( '0' )+ '97' | ( '0' )* '98' | ( '0' )* '99' | D0GIT DIGIT ( DIGIT )+ ) )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:201:11: ( 'g' | 'G' ) ( ( '0' ( '0' )+ '0' ) | ( '0' ( '0' )+ '1' ) | ( '0' ( '0' )+ '2' ) | ( '0' ( '0' )+ '3' ) | ( ( '0' )* '4' ) | ( ( '0' )* '5' ) | ( ( '0' )* '6' ) | ( ( '0' )* '7' ) | ( ( '0' )* '8' ) | ( ( '0' )* '9' ) | ( '0' )* '1' DIGIT | ( '0' )* '2' DIGIT | ( '0' )* '3' DIGIT | ( '0' )+ '40' | ( '0' )+ '41' | ( '0' )+ '42' | ( '0' )* '43' | ( '0' )* '44' | ( '0' )* '45' | ( '0' )* '46' | ( '0' )* '47' | ( '0' )* '48' | ( '0' )* '49' | ( '0' )* '5' DIGIT | ( '0' )* '6' DIGIT | ( '0' )* '7' DIGIT | ( '0' )* '8' DIGIT | ( '0' )+ '90' | ( '0' )+ '91' | ( '0' )* '92' | ( '0' )* '93' | ( '0' )+ '94' | ( '0' )+ '95' | ( '0' )+ '96' | ( '0' )+ '97' | ( '0' )* '98' | ( '0' )* '99' | D0GIT DIGIT ( DIGIT )+ )
 			{
 			if ( input.LA(1)=='G'||input.LA(1)=='g' ) {
 				input.consume();
@@ -699,34 +681,72 @@ public class gcodeLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:197:22: ( ( '0' ( '0' )+ '0' ) | ( '0' ( '0' )+ '1' ) | ( '0' ( '0' )+ '2' ) | ( '0' ( '0' )+ '3' ) | ( ( '0' )* '4' ) | ( ( '0' )* '5' ) | ( ( '0' )* '6' ) | ( ( '0' )* '7' ) | ( ( '0' )* '8' ) | ( ( '0' )* '9' ) | ( '0' )* '1' DIGIT | ( '0' )* '2' DIGIT | ( '0' )* '3' DIGIT | ( '0' )+ '40' | ( '0' )+ '41' | ( '0' )+ '42' | ( '0' )* '43' | ( '0' )* '44' | ( '0' )* '45' | ( '0' )* '46' | ( '0' )* '47' | ( '0' )* '48' | ( '0' )* '49' | ( '0' )* '5' DIGIT | ( '0' )* '6' DIGIT | ( '0' )* '7' DIGIT | ( '0' )* '8' DIGIT | ( '0' )+ '90' | ( '0' )+ '91' | ( '0' )* '92' | ( '0' )* '93' | ( '0' )+ '94' | ( '0' )+ '95' | ( '0' )+ '96' | ( '0' )+ '97' | ( '0' )* '98' | ( '0' )* '99' | D0GIT DIGIT ( DIGIT )+ )
-			int alt47=38;
-			alt47 = dfa47.predict(input);
-			switch (alt47) {
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:201:22: ( ( '0' ( '0' )+ '0' ) | ( '0' ( '0' )+ '1' ) | ( '0' ( '0' )+ '2' ) | ( '0' ( '0' )+ '3' ) | ( ( '0' )* '4' ) | ( ( '0' )* '5' ) | ( ( '0' )* '6' ) | ( ( '0' )* '7' ) | ( ( '0' )* '8' ) | ( ( '0' )* '9' ) | ( '0' )* '1' DIGIT | ( '0' )* '2' DIGIT | ( '0' )* '3' DIGIT | ( '0' )+ '40' | ( '0' )+ '41' | ( '0' )+ '42' | ( '0' )* '43' | ( '0' )* '44' | ( '0' )* '45' | ( '0' )* '46' | ( '0' )* '47' | ( '0' )* '48' | ( '0' )* '49' | ( '0' )* '5' DIGIT | ( '0' )* '6' DIGIT | ( '0' )* '7' DIGIT | ( '0' )* '8' DIGIT | ( '0' )+ '90' | ( '0' )+ '91' | ( '0' )* '92' | ( '0' )* '93' | ( '0' )+ '94' | ( '0' )+ '95' | ( '0' )+ '96' | ( '0' )+ '97' | ( '0' )* '98' | ( '0' )* '99' | D0GIT DIGIT ( DIGIT )+ )
+			int alt46=38;
+			alt46 = dfa46.predict(input);
+			switch (alt46) {
 				case 1 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:198:6: ( '0' ( '0' )+ '0' )
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:202:6: ( '0' ( '0' )+ '0' )
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:198:6: ( '0' ( '0' )+ '0' )
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:198:7: '0' ( '0' )+ '0'
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:202:6: ( '0' ( '0' )+ '0' )
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:202:7: '0' ( '0' )+ '0'
 					{
 					match('0'); 
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:198:11: ( '0' )+
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:202:11: ( '0' )+
+					int cnt8=0;
+					loop8:
+					while (true) {
+						int alt8=2;
+						int LA8_0 = input.LA(1);
+						if ( (LA8_0=='0') ) {
+							int LA8_1 = input.LA(2);
+							if ( (LA8_1=='0') ) {
+								alt8=1;
+							}
+
+						}
+
+						switch (alt8) {
+						case 1 :
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:202:11: '0'
+							{
+							match('0'); 
+							}
+							break;
+
+						default :
+							if ( cnt8 >= 1 ) break loop8;
+							EarlyExitException eee = new EarlyExitException(8, input);
+							throw eee;
+						}
+						cnt8++;
+					}
+
+					match('0'); 
+					}
+
+					}
+					break;
+				case 2 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:203:6: ( '0' ( '0' )+ '1' )
+					{
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:203:6: ( '0' ( '0' )+ '1' )
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:203:7: '0' ( '0' )+ '1'
+					{
+					match('0'); 
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:203:11: ( '0' )+
 					int cnt9=0;
 					loop9:
 					while (true) {
 						int alt9=2;
 						int LA9_0 = input.LA(1);
 						if ( (LA9_0=='0') ) {
-							int LA9_1 = input.LA(2);
-							if ( (LA9_1=='0') ) {
-								alt9=1;
-							}
-
+							alt9=1;
 						}
 
 						switch (alt9) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:198:11: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:203:11: '0'
 							{
 							match('0'); 
 							}
@@ -740,19 +760,19 @@ public class gcodeLexer extends Lexer {
 						cnt9++;
 					}
 
-					match('0'); 
+					match('1'); 
 					}
 
 					}
 					break;
-				case 2 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:199:6: ( '0' ( '0' )+ '1' )
+				case 3 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:204:6: ( '0' ( '0' )+ '2' )
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:199:6: ( '0' ( '0' )+ '1' )
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:199:7: '0' ( '0' )+ '1'
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:204:6: ( '0' ( '0' )+ '2' )
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:204:7: '0' ( '0' )+ '2'
 					{
 					match('0'); 
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:199:11: ( '0' )+
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:204:11: ( '0' )+
 					int cnt10=0;
 					loop10:
 					while (true) {
@@ -764,7 +784,7 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt10) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:199:11: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:204:11: '0'
 							{
 							match('0'); 
 							}
@@ -778,19 +798,19 @@ public class gcodeLexer extends Lexer {
 						cnt10++;
 					}
 
-					match('1'); 
+					match('2'); 
 					}
 
 					}
 					break;
-				case 3 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:200:6: ( '0' ( '0' )+ '2' )
+				case 4 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:205:6: ( '0' ( '0' )+ '3' )
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:200:6: ( '0' ( '0' )+ '2' )
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:200:7: '0' ( '0' )+ '2'
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:205:6: ( '0' ( '0' )+ '3' )
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:205:7: '0' ( '0' )+ '3'
 					{
 					match('0'); 
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:200:11: ( '0' )+
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:205:11: ( '0' )+
 					int cnt11=0;
 					loop11:
 					while (true) {
@@ -802,7 +822,7 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt11) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:200:11: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:205:11: '0'
 							{
 							match('0'); 
 							}
@@ -816,20 +836,18 @@ public class gcodeLexer extends Lexer {
 						cnt11++;
 					}
 
-					match('2'); 
+					match('3'); 
 					}
 
 					}
 					break;
-				case 4 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:201:6: ( '0' ( '0' )+ '3' )
+				case 5 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:206:6: ( ( '0' )* '4' )
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:201:6: ( '0' ( '0' )+ '3' )
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:201:7: '0' ( '0' )+ '3'
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:206:6: ( ( '0' )* '4' )
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:206:7: ( '0' )* '4'
 					{
-					match('0'); 
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:201:11: ( '0' )+
-					int cnt12=0;
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:206:7: ( '0' )*
 					loop12:
 					while (true) {
 						int alt12=2;
@@ -840,32 +858,29 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt12) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:201:11: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:206:7: '0'
 							{
 							match('0'); 
 							}
 							break;
 
 						default :
-							if ( cnt12 >= 1 ) break loop12;
-							EarlyExitException eee = new EarlyExitException(12, input);
-							throw eee;
+							break loop12;
 						}
-						cnt12++;
 					}
 
-					match('3'); 
+					match('4'); 
 					}
 
 					}
 					break;
-				case 5 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:202:6: ( ( '0' )* '4' )
+				case 6 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:207:6: ( ( '0' )* '5' )
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:202:6: ( ( '0' )* '4' )
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:202:7: ( '0' )* '4'
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:207:6: ( ( '0' )* '5' )
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:207:7: ( '0' )* '5'
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:202:7: ( '0' )*
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:207:7: ( '0' )*
 					loop13:
 					while (true) {
 						int alt13=2;
@@ -876,7 +891,7 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt13) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:202:7: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:207:7: '0'
 							{
 							match('0'); 
 							}
@@ -887,18 +902,18 @@ public class gcodeLexer extends Lexer {
 						}
 					}
 
-					match('4'); 
+					match('5'); 
 					}
 
 					}
 					break;
-				case 6 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:203:6: ( ( '0' )* '5' )
+				case 7 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:208:6: ( ( '0' )* '6' )
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:203:6: ( ( '0' )* '5' )
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:203:7: ( '0' )* '5'
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:208:6: ( ( '0' )* '6' )
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:208:7: ( '0' )* '6'
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:203:7: ( '0' )*
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:208:7: ( '0' )*
 					loop14:
 					while (true) {
 						int alt14=2;
@@ -909,7 +924,7 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt14) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:203:7: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:208:7: '0'
 							{
 							match('0'); 
 							}
@@ -920,18 +935,18 @@ public class gcodeLexer extends Lexer {
 						}
 					}
 
-					match('5'); 
+					match('6'); 
 					}
 
 					}
 					break;
-				case 7 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:204:6: ( ( '0' )* '6' )
+				case 8 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:209:6: ( ( '0' )* '7' )
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:204:6: ( ( '0' )* '6' )
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:204:7: ( '0' )* '6'
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:209:6: ( ( '0' )* '7' )
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:209:7: ( '0' )* '7'
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:204:7: ( '0' )*
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:209:7: ( '0' )*
 					loop15:
 					while (true) {
 						int alt15=2;
@@ -942,7 +957,7 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt15) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:204:7: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:209:7: '0'
 							{
 							match('0'); 
 							}
@@ -953,18 +968,18 @@ public class gcodeLexer extends Lexer {
 						}
 					}
 
-					match('6'); 
+					match('7'); 
 					}
 
 					}
 					break;
-				case 8 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:205:6: ( ( '0' )* '7' )
+				case 9 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:210:6: ( ( '0' )* '8' )
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:205:6: ( ( '0' )* '7' )
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:205:7: ( '0' )* '7'
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:210:6: ( ( '0' )* '8' )
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:210:7: ( '0' )* '8'
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:205:7: ( '0' )*
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:210:7: ( '0' )*
 					loop16:
 					while (true) {
 						int alt16=2;
@@ -975,7 +990,7 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt16) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:205:7: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:210:7: '0'
 							{
 							match('0'); 
 							}
@@ -986,18 +1001,18 @@ public class gcodeLexer extends Lexer {
 						}
 					}
 
-					match('7'); 
+					match('8'); 
 					}
 
 					}
 					break;
-				case 9 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:206:6: ( ( '0' )* '8' )
+				case 10 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:211:6: ( ( '0' )* '9' )
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:206:6: ( ( '0' )* '8' )
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:206:7: ( '0' )* '8'
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:211:6: ( ( '0' )* '9' )
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:211:7: ( '0' )* '9'
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:206:7: ( '0' )*
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:211:7: ( '0' )*
 					loop17:
 					while (true) {
 						int alt17=2;
@@ -1008,7 +1023,7 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt17) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:206:7: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:211:7: '0'
 							{
 							match('0'); 
 							}
@@ -1019,18 +1034,15 @@ public class gcodeLexer extends Lexer {
 						}
 					}
 
-					match('8'); 
+					match('9'); 
 					}
 
 					}
 					break;
-				case 10 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:207:6: ( ( '0' )* '9' )
+				case 11 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:212:6: ( '0' )* '1' DIGIT
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:207:6: ( ( '0' )* '9' )
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:207:7: ( '0' )* '9'
-					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:207:7: ( '0' )*
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:212:6: ( '0' )*
 					loop18:
 					while (true) {
 						int alt18=2;
@@ -1041,7 +1053,7 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt18) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:207:7: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:212:6: '0'
 							{
 							match('0'); 
 							}
@@ -1052,15 +1064,15 @@ public class gcodeLexer extends Lexer {
 						}
 					}
 
-					match('9'); 
-					}
+					match('1'); 
+					mDIGIT(); 
 
 					}
 					break;
-				case 11 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:208:6: ( '0' )* '1' DIGIT
+				case 12 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:213:9: ( '0' )* '2' DIGIT
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:208:6: ( '0' )*
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:213:9: ( '0' )*
 					loop19:
 					while (true) {
 						int alt19=2;
@@ -1071,7 +1083,7 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt19) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:208:6: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:213:9: '0'
 							{
 							match('0'); 
 							}
@@ -1082,15 +1094,15 @@ public class gcodeLexer extends Lexer {
 						}
 					}
 
-					match('1'); 
+					match('2'); 
 					mDIGIT(); 
 
 					}
 					break;
-				case 12 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:209:9: ( '0' )* '2' DIGIT
+				case 13 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:214:9: ( '0' )* '3' DIGIT
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:209:9: ( '0' )*
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:214:9: ( '0' )*
 					loop20:
 					while (true) {
 						int alt20=2;
@@ -1101,7 +1113,7 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt20) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:209:9: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:214:9: '0'
 							{
 							match('0'); 
 							}
@@ -1112,15 +1124,16 @@ public class gcodeLexer extends Lexer {
 						}
 					}
 
-					match('2'); 
+					match('3'); 
 					mDIGIT(); 
 
 					}
 					break;
-				case 13 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:210:9: ( '0' )* '3' DIGIT
+				case 14 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:215:9: ( '0' )+ '40'
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:210:9: ( '0' )*
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:215:9: ( '0' )+
+					int cnt21=0;
 					loop21:
 					while (true) {
 						int alt21=2;
@@ -1131,26 +1144,28 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt21) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:210:9: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:215:9: '0'
 							{
 							match('0'); 
 							}
 							break;
 
 						default :
-							break loop21;
+							if ( cnt21 >= 1 ) break loop21;
+							EarlyExitException eee = new EarlyExitException(21, input);
+							throw eee;
 						}
+						cnt21++;
 					}
 
-					match('3'); 
-					mDIGIT(); 
+					match("40"); 
 
 					}
 					break;
-				case 14 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:211:9: ( '0' )+ '40'
+				case 15 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:216:6: ( '0' )+ '41'
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:211:9: ( '0' )+
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:216:6: ( '0' )+
 					int cnt22=0;
 					loop22:
 					while (true) {
@@ -1162,7 +1177,7 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt22) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:211:9: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:216:6: '0'
 							{
 							match('0'); 
 							}
@@ -1176,14 +1191,14 @@ public class gcodeLexer extends Lexer {
 						cnt22++;
 					}
 
-					match("40"); 
+					match("41"); 
 
 					}
 					break;
-				case 15 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:212:6: ( '0' )+ '41'
+				case 16 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:217:6: ( '0' )+ '42'
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:212:6: ( '0' )+
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:217:6: ( '0' )+
 					int cnt23=0;
 					loop23:
 					while (true) {
@@ -1195,7 +1210,7 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt23) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:212:6: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:217:6: '0'
 							{
 							match('0'); 
 							}
@@ -1209,15 +1224,14 @@ public class gcodeLexer extends Lexer {
 						cnt23++;
 					}
 
-					match("41"); 
+					match("42"); 
 
 					}
 					break;
-				case 16 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:213:6: ( '0' )+ '42'
+				case 17 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:218:6: ( '0' )* '43'
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:213:6: ( '0' )+
-					int cnt24=0;
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:218:6: ( '0' )*
 					loop24:
 					while (true) {
 						int alt24=2;
@@ -1228,28 +1242,25 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt24) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:213:6: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:218:6: '0'
 							{
 							match('0'); 
 							}
 							break;
 
 						default :
-							if ( cnt24 >= 1 ) break loop24;
-							EarlyExitException eee = new EarlyExitException(24, input);
-							throw eee;
+							break loop24;
 						}
-						cnt24++;
 					}
 
-					match("42"); 
+					match("43"); 
 
 					}
 					break;
-				case 17 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:214:6: ( '0' )* '43'
+				case 18 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:219:6: ( '0' )* '44'
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:214:6: ( '0' )*
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:219:6: ( '0' )*
 					loop25:
 					while (true) {
 						int alt25=2;
@@ -1260,7 +1271,7 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt25) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:214:6: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:219:6: '0'
 							{
 							match('0'); 
 							}
@@ -1271,14 +1282,14 @@ public class gcodeLexer extends Lexer {
 						}
 					}
 
-					match("43"); 
+					match("44"); 
 
 					}
 					break;
-				case 18 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:215:6: ( '0' )* '44'
+				case 19 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:220:6: ( '0' )* '45'
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:215:6: ( '0' )*
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:220:6: ( '0' )*
 					loop26:
 					while (true) {
 						int alt26=2;
@@ -1289,7 +1300,7 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt26) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:215:6: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:220:6: '0'
 							{
 							match('0'); 
 							}
@@ -1300,14 +1311,14 @@ public class gcodeLexer extends Lexer {
 						}
 					}
 
-					match("44"); 
+					match("45"); 
 
 					}
 					break;
-				case 19 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:216:6: ( '0' )* '45'
+				case 20 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:221:6: ( '0' )* '46'
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:216:6: ( '0' )*
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:221:6: ( '0' )*
 					loop27:
 					while (true) {
 						int alt27=2;
@@ -1318,7 +1329,7 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt27) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:216:6: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:221:6: '0'
 							{
 							match('0'); 
 							}
@@ -1329,14 +1340,14 @@ public class gcodeLexer extends Lexer {
 						}
 					}
 
-					match("45"); 
+					match("46"); 
 
 					}
 					break;
-				case 20 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:217:6: ( '0' )* '46'
+				case 21 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:222:6: ( '0' )* '47'
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:217:6: ( '0' )*
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:222:6: ( '0' )*
 					loop28:
 					while (true) {
 						int alt28=2;
@@ -1347,7 +1358,7 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt28) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:217:6: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:222:6: '0'
 							{
 							match('0'); 
 							}
@@ -1358,14 +1369,14 @@ public class gcodeLexer extends Lexer {
 						}
 					}
 
-					match("46"); 
+					match("47"); 
 
 					}
 					break;
-				case 21 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:218:6: ( '0' )* '47'
+				case 22 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:223:6: ( '0' )* '48'
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:218:6: ( '0' )*
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:223:6: ( '0' )*
 					loop29:
 					while (true) {
 						int alt29=2;
@@ -1376,7 +1387,7 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt29) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:218:6: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:223:6: '0'
 							{
 							match('0'); 
 							}
@@ -1387,14 +1398,14 @@ public class gcodeLexer extends Lexer {
 						}
 					}
 
-					match("47"); 
+					match("48"); 
 
 					}
 					break;
-				case 22 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:219:6: ( '0' )* '48'
+				case 23 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:224:6: ( '0' )* '49'
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:219:6: ( '0' )*
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:224:6: ( '0' )*
 					loop30:
 					while (true) {
 						int alt30=2;
@@ -1405,7 +1416,7 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt30) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:219:6: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:224:6: '0'
 							{
 							match('0'); 
 							}
@@ -1416,14 +1427,14 @@ public class gcodeLexer extends Lexer {
 						}
 					}
 
-					match("48"); 
+					match("49"); 
 
 					}
 					break;
-				case 23 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:220:6: ( '0' )* '49'
+				case 24 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:225:6: ( '0' )* '5' DIGIT
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:220:6: ( '0' )*
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:225:6: ( '0' )*
 					loop31:
 					while (true) {
 						int alt31=2;
@@ -1434,7 +1445,7 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt31) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:220:6: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:225:6: '0'
 							{
 							match('0'); 
 							}
@@ -1445,14 +1456,15 @@ public class gcodeLexer extends Lexer {
 						}
 					}
 
-					match("49"); 
+					match('5'); 
+					mDIGIT(); 
 
 					}
 					break;
-				case 24 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:221:6: ( '0' )* '5' DIGIT
+				case 25 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:226:6: ( '0' )* '6' DIGIT
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:221:6: ( '0' )*
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:226:6: ( '0' )*
 					loop32:
 					while (true) {
 						int alt32=2;
@@ -1463,7 +1475,7 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt32) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:221:6: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:226:6: '0'
 							{
 							match('0'); 
 							}
@@ -1474,15 +1486,15 @@ public class gcodeLexer extends Lexer {
 						}
 					}
 
-					match('5'); 
+					match('6'); 
 					mDIGIT(); 
 
 					}
 					break;
-				case 25 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:222:6: ( '0' )* '6' DIGIT
+				case 26 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:227:6: ( '0' )* '7' DIGIT
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:222:6: ( '0' )*
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:227:6: ( '0' )*
 					loop33:
 					while (true) {
 						int alt33=2;
@@ -1493,7 +1505,7 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt33) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:222:6: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:227:6: '0'
 							{
 							match('0'); 
 							}
@@ -1504,15 +1516,15 @@ public class gcodeLexer extends Lexer {
 						}
 					}
 
-					match('6'); 
+					match('7'); 
 					mDIGIT(); 
 
 					}
 					break;
-				case 26 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:223:6: ( '0' )* '7' DIGIT
+				case 27 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:228:6: ( '0' )* '8' DIGIT
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:223:6: ( '0' )*
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:228:6: ( '0' )*
 					loop34:
 					while (true) {
 						int alt34=2;
@@ -1523,7 +1535,7 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt34) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:223:6: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:228:6: '0'
 							{
 							match('0'); 
 							}
@@ -1534,15 +1546,16 @@ public class gcodeLexer extends Lexer {
 						}
 					}
 
-					match('7'); 
+					match('8'); 
 					mDIGIT(); 
 
 					}
 					break;
-				case 27 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:224:6: ( '0' )* '8' DIGIT
+				case 28 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:229:6: ( '0' )+ '90'
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:224:6: ( '0' )*
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:229:6: ( '0' )+
+					int cnt35=0;
 					loop35:
 					while (true) {
 						int alt35=2;
@@ -1553,26 +1566,28 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt35) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:224:6: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:229:6: '0'
 							{
 							match('0'); 
 							}
 							break;
 
 						default :
-							break loop35;
+							if ( cnt35 >= 1 ) break loop35;
+							EarlyExitException eee = new EarlyExitException(35, input);
+							throw eee;
 						}
+						cnt35++;
 					}
 
-					match('8'); 
-					mDIGIT(); 
+					match("90"); 
 
 					}
 					break;
-				case 28 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:225:6: ( '0' )+ '90'
+				case 29 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:230:6: ( '0' )+ '91'
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:225:6: ( '0' )+
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:230:6: ( '0' )+
 					int cnt36=0;
 					loop36:
 					while (true) {
@@ -1584,7 +1599,7 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt36) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:225:6: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:230:6: '0'
 							{
 							match('0'); 
 							}
@@ -1598,15 +1613,14 @@ public class gcodeLexer extends Lexer {
 						cnt36++;
 					}
 
-					match("90"); 
+					match("91"); 
 
 					}
 					break;
-				case 29 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:226:6: ( '0' )+ '91'
+				case 30 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:231:6: ( '0' )* '92'
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:226:6: ( '0' )+
-					int cnt37=0;
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:231:6: ( '0' )*
 					loop37:
 					while (true) {
 						int alt37=2;
@@ -1617,28 +1631,25 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt37) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:226:6: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:231:6: '0'
 							{
 							match('0'); 
 							}
 							break;
 
 						default :
-							if ( cnt37 >= 1 ) break loop37;
-							EarlyExitException eee = new EarlyExitException(37, input);
-							throw eee;
+							break loop37;
 						}
-						cnt37++;
 					}
 
-					match("91"); 
+					match("92"); 
 
 					}
 					break;
-				case 30 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:227:6: ( '0' )* '92'
+				case 31 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:232:6: ( '0' )* '93'
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:227:6: ( '0' )*
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:232:6: ( '0' )*
 					loop38:
 					while (true) {
 						int alt38=2;
@@ -1649,7 +1660,7 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt38) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:227:6: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:232:6: '0'
 							{
 							match('0'); 
 							}
@@ -1660,14 +1671,15 @@ public class gcodeLexer extends Lexer {
 						}
 					}
 
-					match("92"); 
+					match("93"); 
 
 					}
 					break;
-				case 31 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:228:6: ( '0' )* '93'
+				case 32 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:233:6: ( '0' )+ '94'
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:228:6: ( '0' )*
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:233:6: ( '0' )+
+					int cnt39=0;
 					loop39:
 					while (true) {
 						int alt39=2;
@@ -1678,25 +1690,28 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt39) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:228:6: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:233:6: '0'
 							{
 							match('0'); 
 							}
 							break;
 
 						default :
-							break loop39;
+							if ( cnt39 >= 1 ) break loop39;
+							EarlyExitException eee = new EarlyExitException(39, input);
+							throw eee;
 						}
+						cnt39++;
 					}
 
-					match("93"); 
+					match("94"); 
 
 					}
 					break;
-				case 32 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:229:6: ( '0' )+ '94'
+				case 33 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:234:6: ( '0' )+ '95'
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:229:6: ( '0' )+
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:234:6: ( '0' )+
 					int cnt40=0;
 					loop40:
 					while (true) {
@@ -1708,7 +1723,7 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt40) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:229:6: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:234:6: '0'
 							{
 							match('0'); 
 							}
@@ -1722,14 +1737,14 @@ public class gcodeLexer extends Lexer {
 						cnt40++;
 					}
 
-					match("94"); 
+					match("95"); 
 
 					}
 					break;
-				case 33 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:230:6: ( '0' )+ '95'
+				case 34 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:235:6: ( '0' )+ '96'
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:230:6: ( '0' )+
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:235:6: ( '0' )+
 					int cnt41=0;
 					loop41:
 					while (true) {
@@ -1741,7 +1756,7 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt41) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:230:6: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:235:6: '0'
 							{
 							match('0'); 
 							}
@@ -1755,14 +1770,14 @@ public class gcodeLexer extends Lexer {
 						cnt41++;
 					}
 
-					match("95"); 
+					match("96"); 
 
 					}
 					break;
-				case 34 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:231:6: ( '0' )+ '96'
+				case 35 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:236:6: ( '0' )+ '97'
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:231:6: ( '0' )+
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:236:6: ( '0' )+
 					int cnt42=0;
 					loop42:
 					while (true) {
@@ -1774,7 +1789,7 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt42) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:231:6: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:236:6: '0'
 							{
 							match('0'); 
 							}
@@ -1788,15 +1803,14 @@ public class gcodeLexer extends Lexer {
 						cnt42++;
 					}
 
-					match("96"); 
+					match("97"); 
 
 					}
 					break;
-				case 35 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:232:6: ( '0' )+ '97'
+				case 36 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:237:6: ( '0' )* '98'
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:232:6: ( '0' )+
-					int cnt43=0;
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:237:6: ( '0' )*
 					loop43:
 					while (true) {
 						int alt43=2;
@@ -1807,28 +1821,25 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt43) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:232:6: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:237:6: '0'
 							{
 							match('0'); 
 							}
 							break;
 
 						default :
-							if ( cnt43 >= 1 ) break loop43;
-							EarlyExitException eee = new EarlyExitException(43, input);
-							throw eee;
+							break loop43;
 						}
-						cnt43++;
 					}
 
-					match("97"); 
+					match("98"); 
 
 					}
 					break;
-				case 36 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:233:6: ( '0' )* '98'
+				case 37 :
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:238:6: ( '0' )* '99'
 					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:233:6: ( '0' )*
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:238:6: ( '0' )*
 					loop44:
 					while (true) {
 						int alt44=2;
@@ -1839,7 +1850,7 @@ public class gcodeLexer extends Lexer {
 
 						switch (alt44) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:233:6: '0'
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:238:6: '0'
 							{
 							match('0'); 
 							}
@@ -1850,57 +1861,28 @@ public class gcodeLexer extends Lexer {
 						}
 					}
 
-					match("98"); 
-
-					}
-					break;
-				case 37 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:234:6: ( '0' )* '99'
-					{
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:234:6: ( '0' )*
-					loop45:
-					while (true) {
-						int alt45=2;
-						int LA45_0 = input.LA(1);
-						if ( (LA45_0=='0') ) {
-							alt45=1;
-						}
-
-						switch (alt45) {
-						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:234:6: '0'
-							{
-							match('0'); 
-							}
-							break;
-
-						default :
-							break loop45;
-						}
-					}
-
 					match("99"); 
 
 					}
 					break;
 				case 38 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:235:6: D0GIT DIGIT ( DIGIT )+
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:239:6: D0GIT DIGIT ( DIGIT )+
 					{
 					mD0GIT(); 
 
 					mDIGIT(); 
 
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:235:18: ( DIGIT )+
-					int cnt46=0;
-					loop46:
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:239:18: ( DIGIT )+
+					int cnt45=0;
+					loop45:
 					while (true) {
-						int alt46=2;
-						int LA46_0 = input.LA(1);
-						if ( ((LA46_0 >= '0' && LA46_0 <= '9')) ) {
-							alt46=1;
+						int alt45=2;
+						int LA45_0 = input.LA(1);
+						if ( ((LA45_0 >= '0' && LA45_0 <= '9')) ) {
+							alt45=1;
 						}
 
-						switch (alt46) {
+						switch (alt45) {
 						case 1 :
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:
 							{
@@ -1916,11 +1898,11 @@ public class gcodeLexer extends Lexer {
 							break;
 
 						default :
-							if ( cnt46 >= 1 ) break loop46;
-							EarlyExitException eee = new EarlyExitException(46, input);
+							if ( cnt45 >= 1 ) break loop45;
+							EarlyExitException eee = new EarlyExitException(45, input);
 							throw eee;
 						}
-						cnt46++;
+						cnt45++;
 					}
 
 					}
@@ -1944,8 +1926,8 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = X;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:241:3: ( ( 'x' | 'X' ) FLOAT )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:241:5: ( 'x' | 'X' ) FLOAT
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:245:3: ( ( 'x' | 'X' ) FLOAT )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:245:5: ( 'x' | 'X' ) FLOAT
 			{
 			if ( input.LA(1)=='X'||input.LA(1)=='x' ) {
 				input.consume();
@@ -1973,8 +1955,8 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = Y;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:242:3: ( ( 'y' | 'Y' ) FLOAT )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:242:5: ( 'y' | 'Y' ) FLOAT
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:246:3: ( ( 'y' | 'Y' ) FLOAT )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:246:5: ( 'y' | 'Y' ) FLOAT
 			{
 			if ( input.LA(1)=='Y'||input.LA(1)=='y' ) {
 				input.consume();
@@ -2002,8 +1984,8 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = Z;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:243:3: ( ( 'z' | 'Z' ) FLOAT )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:243:5: ( 'z' | 'Z' ) FLOAT
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:247:3: ( ( 'z' | 'Z' ) FLOAT )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:247:5: ( 'z' | 'Z' ) FLOAT
 			{
 			if ( input.LA(1)=='Z'||input.LA(1)=='z' ) {
 				input.consume();
@@ -2031,8 +2013,8 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = I;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:244:3: ( ( 'i' | 'I' ) FLOAT )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:244:5: ( 'i' | 'I' ) FLOAT
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:248:3: ( ( 'i' | 'I' ) FLOAT )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:248:5: ( 'i' | 'I' ) FLOAT
 			{
 			if ( input.LA(1)=='I'||input.LA(1)=='i' ) {
 				input.consume();
@@ -2060,8 +2042,8 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = J;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:245:3: ( ( 'j' | 'J' ) FLOAT )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:245:5: ( 'j' | 'J' ) FLOAT
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:249:3: ( ( 'j' | 'J' ) FLOAT )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:249:5: ( 'j' | 'J' ) FLOAT
 			{
 			if ( input.LA(1)=='J'||input.LA(1)=='j' ) {
 				input.consume();
@@ -2089,8 +2071,8 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = K;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:246:3: ( ( 'k' | 'K' ) FLOAT )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:246:5: ( 'k' | 'K' ) FLOAT
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:250:3: ( ( 'k' | 'K' ) FLOAT )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:250:5: ( 'k' | 'K' ) FLOAT
 			{
 			if ( input.LA(1)=='K'||input.LA(1)=='k' ) {
 				input.consume();
@@ -2118,8 +2100,8 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = M;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:249:3: ( ( 'm' | 'M' ) DIGIT DIGIT )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:249:5: ( 'm' | 'M' ) DIGIT DIGIT
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:253:3: ( ( 'm' | 'M' ) DIGIT DIGIT )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:253:5: ( 'm' | 'M' ) DIGIT DIGIT
 			{
 			if ( input.LA(1)=='M'||input.LA(1)=='m' ) {
 				input.consume();
@@ -2149,8 +2131,8 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = S;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:250:3: ( ( 's' | 'S' ) FLOAT )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:250:5: ( 's' | 'S' ) FLOAT
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:254:3: ( ( 's' | 'S' ) FLOAT )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:254:5: ( 's' | 'S' ) FLOAT
 			{
 			if ( input.LA(1)=='S'||input.LA(1)=='s' ) {
 				input.consume();
@@ -2178,8 +2160,8 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = E;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:251:3: ( ( 'e' | 'E' ) FLOAT )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:251:5: ( 'e' | 'E' ) FLOAT
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:255:3: ( ( 'e' | 'E' ) FLOAT )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:255:5: ( 'e' | 'E' ) FLOAT
 			{
 			if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
 				input.consume();
@@ -2207,8 +2189,8 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = F;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:252:3: ( ( 'f' | 'F' ) FLOAT )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:252:5: ( 'f' | 'F' ) FLOAT
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:256:3: ( ( 'f' | 'F' ) FLOAT )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:256:5: ( 'f' | 'F' ) FLOAT
 			{
 			if ( input.LA(1)=='F'||input.LA(1)=='f' ) {
 				input.consume();
@@ -2236,8 +2218,8 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = T;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:253:3: ( ( 't' | 'T' ) POS ( CONF )? )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:253:5: ( 't' | 'T' ) POS ( CONF )?
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:257:3: ( ( 't' | 'T' ) POS ( CONF )? )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:257:5: ( 't' | 'T' ) POS ( CONF )?
 			{
 			if ( input.LA(1)=='T'||input.LA(1)=='t' ) {
 				input.consume();
@@ -2249,15 +2231,15 @@ public class gcodeLexer extends Lexer {
 			}
 			mPOS(); 
 
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:253:19: ( CONF )?
-			int alt48=2;
-			int LA48_0 = input.LA(1);
-			if ( ((LA48_0 >= '0' && LA48_0 <= '9')) ) {
-				alt48=1;
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:257:19: ( CONF )?
+			int alt47=2;
+			int LA47_0 = input.LA(1);
+			if ( ((LA47_0 >= '0' && LA47_0 <= '9')) ) {
+				alt47=1;
 			}
-			switch (alt48) {
+			switch (alt47) {
 				case 1 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:253:19: CONF
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:257:19: CONF
 					{
 					mCONF(); 
 
@@ -2282,8 +2264,8 @@ public class gcodeLexer extends Lexer {
 		try {
 			int _type = EOF;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:255:5: ( '<EOF>' )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:255:7: '<EOF>'
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:259:5: ( '<EOF>' )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:259:7: '<EOF>'
 			{
 			match("<EOF>"); 
 
@@ -2301,8 +2283,8 @@ public class gcodeLexer extends Lexer {
 	// $ANTLR start "POS"
 	public final void mPOS() throws RecognitionException {
 		try {
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:260:5: ( DIGIT DIGIT )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:260:7: DIGIT DIGIT
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:264:5: ( DIGIT DIGIT )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:264:7: DIGIT DIGIT
 			{
 			mDIGIT(); 
 
@@ -2320,8 +2302,8 @@ public class gcodeLexer extends Lexer {
 	// $ANTLR start "CONF"
 	public final void mCONF() throws RecognitionException {
 		try {
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:263:6: ( DIGIT DIGIT )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:263:8: DIGIT DIGIT
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:267:6: ( DIGIT DIGIT )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:267:8: DIGIT DIGIT
 			{
 			mDIGIT(); 
 
@@ -2339,7 +2321,7 @@ public class gcodeLexer extends Lexer {
 	// $ANTLR start "DIGIT"
 	public final void mDIGIT() throws RecognitionException {
 		try {
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:268:7: ( ( '0' .. '9' ) )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:272:7: ( ( '0' .. '9' ) )
 			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:
 			{
 			if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
@@ -2362,7 +2344,7 @@ public class gcodeLexer extends Lexer {
 	// $ANTLR start "D0GIT"
 	public final void mD0GIT() throws RecognitionException {
 		try {
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:271:7: ( ( '1' .. '9' ) )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:275:7: ( ( '1' .. '9' ) )
 			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:
 			{
 			if ( (input.LA(1) >= '1' && input.LA(1) <= '9') ) {
@@ -2385,58 +2367,58 @@ public class gcodeLexer extends Lexer {
 	// $ANTLR start "FLOAT"
 	public final void mFLOAT() throws RecognitionException {
 		try {
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:275:7: ( ( '0' | D0GIT ( ( DIGIT )+ )? ) ( '.' ( DIGIT )+ )? )
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:275:9: ( '0' | D0GIT ( ( DIGIT )+ )? ) ( '.' ( DIGIT )+ )?
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:7: ( ( '0' | D0GIT ( ( DIGIT )+ )? ) ( '.' ( DIGIT )+ )? )
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:9: ( '0' | D0GIT ( ( DIGIT )+ )? ) ( '.' ( DIGIT )+ )?
 			{
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:275:9: ( '0' | D0GIT ( ( DIGIT )+ )? )
-			int alt51=2;
-			int LA51_0 = input.LA(1);
-			if ( (LA51_0=='0') ) {
-				alt51=1;
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:9: ( '0' | D0GIT ( ( DIGIT )+ )? )
+			int alt50=2;
+			int LA50_0 = input.LA(1);
+			if ( (LA50_0=='0') ) {
+				alt50=1;
 			}
-			else if ( ((LA51_0 >= '1' && LA51_0 <= '9')) ) {
-				alt51=2;
+			else if ( ((LA50_0 >= '1' && LA50_0 <= '9')) ) {
+				alt50=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 51, 0, input);
+					new NoViableAltException("", 50, 0, input);
 				throw nvae;
 			}
 
-			switch (alt51) {
+			switch (alt50) {
 				case 1 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:275:11: '0'
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:11: '0'
 					{
 					match('0'); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:275:17: D0GIT ( ( DIGIT )+ )?
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:17: D0GIT ( ( DIGIT )+ )?
 					{
 					mD0GIT(); 
 
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:275:23: ( ( DIGIT )+ )?
-					int alt50=2;
-					int LA50_0 = input.LA(1);
-					if ( ((LA50_0 >= '0' && LA50_0 <= '9')) ) {
-						alt50=1;
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:23: ( ( DIGIT )+ )?
+					int alt49=2;
+					int LA49_0 = input.LA(1);
+					if ( ((LA49_0 >= '0' && LA49_0 <= '9')) ) {
+						alt49=1;
 					}
-					switch (alt50) {
+					switch (alt49) {
 						case 1 :
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:275:24: ( DIGIT )+
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:24: ( DIGIT )+
 							{
-							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:275:24: ( DIGIT )+
-							int cnt49=0;
-							loop49:
+							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:24: ( DIGIT )+
+							int cnt48=0;
+							loop48:
 							while (true) {
-								int alt49=2;
-								int LA49_0 = input.LA(1);
-								if ( ((LA49_0 >= '0' && LA49_0 <= '9')) ) {
-									alt49=1;
+								int alt48=2;
+								int LA48_0 = input.LA(1);
+								if ( ((LA48_0 >= '0' && LA48_0 <= '9')) ) {
+									alt48=1;
 								}
 
-								switch (alt49) {
+								switch (alt48) {
 								case 1 :
 									// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:
 									{
@@ -2452,11 +2434,11 @@ public class gcodeLexer extends Lexer {
 									break;
 
 								default :
-									if ( cnt49 >= 1 ) break loop49;
-									EarlyExitException eee = new EarlyExitException(49, input);
+									if ( cnt48 >= 1 ) break loop48;
+									EarlyExitException eee = new EarlyExitException(48, input);
 									throw eee;
 								}
-								cnt49++;
+								cnt48++;
 							}
 
 							}
@@ -2469,28 +2451,28 @@ public class gcodeLexer extends Lexer {
 
 			}
 
-			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:275:35: ( '.' ( DIGIT )+ )?
-			int alt53=2;
-			int LA53_0 = input.LA(1);
-			if ( (LA53_0=='.') ) {
-				alt53=1;
+			// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:35: ( '.' ( DIGIT )+ )?
+			int alt52=2;
+			int LA52_0 = input.LA(1);
+			if ( (LA52_0=='.') ) {
+				alt52=1;
 			}
-			switch (alt53) {
+			switch (alt52) {
 				case 1 :
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:275:36: '.' ( DIGIT )+
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:36: '.' ( DIGIT )+
 					{
 					match('.'); 
-					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:275:40: ( DIGIT )+
-					int cnt52=0;
-					loop52:
+					// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:279:40: ( DIGIT )+
+					int cnt51=0;
+					loop51:
 					while (true) {
-						int alt52=2;
-						int LA52_0 = input.LA(1);
-						if ( ((LA52_0 >= '0' && LA52_0 <= '9')) ) {
-							alt52=1;
+						int alt51=2;
+						int LA51_0 = input.LA(1);
+						if ( ((LA51_0 >= '0' && LA51_0 <= '9')) ) {
+							alt51=1;
 						}
 
-						switch (alt52) {
+						switch (alt51) {
 						case 1 :
 							// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:
 							{
@@ -2506,11 +2488,11 @@ public class gcodeLexer extends Lexer {
 							break;
 
 						default :
-							if ( cnt52 >= 1 ) break loop52;
-							EarlyExitException eee = new EarlyExitException(52, input);
+							if ( cnt51 >= 1 ) break loop51;
+							EarlyExitException eee = new EarlyExitException(51, input);
 							throw eee;
 						}
-						cnt52++;
+						cnt51++;
 					}
 
 					}
@@ -2530,23 +2512,23 @@ public class gcodeLexer extends Lexer {
 	@Override
 	public void mTokens() throws RecognitionException {
 		// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:1:8: ( COMMENT | WS | EOL | G00 | G01 | G02 | G03 | G90 | G91 | G40 | G41 | G42 | G94 | G95 | G96 | G97 | OTHERG | X | Y | Z | I | J | K | M | S | E | F | T | EOF )
-		int alt54=29;
+		int alt53=29;
 		switch ( input.LA(1) ) {
 		case ';':
 			{
-			alt54=1;
+			alt53=1;
 			}
 			break;
 		case '\t':
 		case ' ':
 			{
-			alt54=2;
+			alt53=2;
 			}
 			break;
 		case '\n':
 		case '\r':
 			{
-			alt54=3;
+			alt53=3;
 			}
 			break;
 		case 'G':
@@ -2558,84 +2540,84 @@ public class gcodeLexer extends Lexer {
 				switch ( input.LA(3) ) {
 				case '0':
 					{
-					int LA54_24 = input.LA(4);
-					if ( ((LA54_24 >= '0' && LA54_24 <= '9')) ) {
-						alt54=17;
+					int LA53_24 = input.LA(4);
+					if ( ((LA53_24 >= '0' && LA53_24 <= '9')) ) {
+						alt53=17;
 					}
 
 					else {
-						alt54=8;
+						alt53=8;
 					}
 
 					}
 					break;
 				case '1':
 					{
-					int LA54_25 = input.LA(4);
-					if ( ((LA54_25 >= '0' && LA54_25 <= '9')) ) {
-						alt54=17;
+					int LA53_25 = input.LA(4);
+					if ( ((LA53_25 >= '0' && LA53_25 <= '9')) ) {
+						alt53=17;
 					}
 
 					else {
-						alt54=9;
+						alt53=9;
 					}
 
 					}
 					break;
 				case '4':
 					{
-					int LA54_26 = input.LA(4);
-					if ( ((LA54_26 >= '0' && LA54_26 <= '9')) ) {
-						alt54=17;
+					int LA53_26 = input.LA(4);
+					if ( ((LA53_26 >= '0' && LA53_26 <= '9')) ) {
+						alt53=17;
 					}
 
 					else {
-						alt54=13;
+						alt53=13;
 					}
 
 					}
 					break;
 				case '5':
 					{
-					int LA54_27 = input.LA(4);
-					if ( ((LA54_27 >= '0' && LA54_27 <= '9')) ) {
-						alt54=17;
+					int LA53_27 = input.LA(4);
+					if ( ((LA53_27 >= '0' && LA53_27 <= '9')) ) {
+						alt53=17;
 					}
 
 					else {
-						alt54=14;
+						alt53=14;
 					}
 
 					}
 					break;
 				case '6':
 					{
-					int LA54_28 = input.LA(4);
-					if ( ((LA54_28 >= '0' && LA54_28 <= '9')) ) {
-						alt54=17;
+					int LA53_28 = input.LA(4);
+					if ( ((LA53_28 >= '0' && LA53_28 <= '9')) ) {
+						alt53=17;
 					}
 
 					else {
-						alt54=15;
+						alt53=15;
 					}
 
 					}
 					break;
 				case '7':
 					{
-					int LA54_29 = input.LA(4);
-					if ( ((LA54_29 >= '0' && LA54_29 <= '9')) ) {
-						alt54=17;
+					int LA53_29 = input.LA(4);
+					if ( ((LA53_29 >= '0' && LA53_29 <= '9')) ) {
+						alt53=17;
 					}
 
 					else {
-						alt54=16;
+						alt53=16;
 					}
 
 					}
 					break;
 				default:
-					alt54=17;
+					alt53=17;
 				}
 				}
 				break;
@@ -2644,45 +2626,45 @@ public class gcodeLexer extends Lexer {
 				switch ( input.LA(3) ) {
 				case '0':
 					{
-					int LA54_30 = input.LA(4);
-					if ( ((LA54_30 >= '0' && LA54_30 <= '9')) ) {
-						alt54=17;
+					int LA53_30 = input.LA(4);
+					if ( ((LA53_30 >= '0' && LA53_30 <= '9')) ) {
+						alt53=17;
 					}
 
 					else {
-						alt54=10;
+						alt53=10;
 					}
 
 					}
 					break;
 				case '1':
 					{
-					int LA54_31 = input.LA(4);
-					if ( ((LA54_31 >= '0' && LA54_31 <= '9')) ) {
-						alt54=17;
+					int LA53_31 = input.LA(4);
+					if ( ((LA53_31 >= '0' && LA53_31 <= '9')) ) {
+						alt53=17;
 					}
 
 					else {
-						alt54=11;
+						alt53=11;
 					}
 
 					}
 					break;
 				case '2':
 					{
-					int LA54_32 = input.LA(4);
-					if ( ((LA54_32 >= '0' && LA54_32 <= '9')) ) {
-						alt54=17;
+					int LA53_32 = input.LA(4);
+					if ( ((LA53_32 >= '0' && LA53_32 <= '9')) ) {
+						alt53=17;
 					}
 
 					else {
-						alt54=12;
+						alt53=12;
 					}
 
 					}
 					break;
 				default:
-					alt54=17;
+					alt53=17;
 				}
 				}
 				break;
@@ -2691,52 +2673,52 @@ public class gcodeLexer extends Lexer {
 				switch ( input.LA(3) ) {
 				case '0':
 					{
-					int LA54_33 = input.LA(4);
-					if ( ((LA54_33 >= '0' && LA54_33 <= '9')) ) {
-						alt54=17;
+					int LA53_33 = input.LA(4);
+					if ( ((LA53_33 >= '0' && LA53_33 <= '9')) ) {
+						alt53=17;
 					}
 
 					else {
-						alt54=4;
+						alt53=4;
 					}
 
 					}
 					break;
 				case '1':
 					{
-					int LA54_35 = input.LA(4);
-					if ( ((LA54_35 >= '0' && LA54_35 <= '9')) ) {
-						alt54=17;
+					int LA53_35 = input.LA(4);
+					if ( ((LA53_35 >= '0' && LA53_35 <= '9')) ) {
+						alt53=17;
 					}
 
 					else {
-						alt54=5;
+						alt53=5;
 					}
 
 					}
 					break;
 				case '2':
 					{
-					int LA54_36 = input.LA(4);
-					if ( ((LA54_36 >= '0' && LA54_36 <= '9')) ) {
-						alt54=17;
+					int LA53_36 = input.LA(4);
+					if ( ((LA53_36 >= '0' && LA53_36 <= '9')) ) {
+						alt53=17;
 					}
 
 					else {
-						alt54=6;
+						alt53=6;
 					}
 
 					}
 					break;
 				case '3':
 					{
-					int LA54_37 = input.LA(4);
-					if ( ((LA54_37 >= '0' && LA54_37 <= '9')) ) {
-						alt54=17;
+					int LA53_37 = input.LA(4);
+					if ( ((LA53_37 >= '0' && LA53_37 <= '9')) ) {
+						alt53=17;
 					}
 
 					else {
-						alt54=7;
+						alt53=7;
 					}
 
 					}
@@ -2748,49 +2730,49 @@ public class gcodeLexer extends Lexer {
 				case '8':
 				case '9':
 					{
-					alt54=17;
+					alt53=17;
 					}
 					break;
 				default:
-					alt54=4;
+					alt53=4;
 				}
 				}
 				break;
 			case '1':
 				{
-				int LA54_20 = input.LA(3);
-				if ( ((LA54_20 >= '0' && LA54_20 <= '9')) ) {
-					alt54=17;
+				int LA53_20 = input.LA(3);
+				if ( ((LA53_20 >= '0' && LA53_20 <= '9')) ) {
+					alt53=17;
 				}
 
 				else {
-					alt54=5;
+					alt53=5;
 				}
 
 				}
 				break;
 			case '2':
 				{
-				int LA54_21 = input.LA(3);
-				if ( ((LA54_21 >= '0' && LA54_21 <= '9')) ) {
-					alt54=17;
+				int LA53_21 = input.LA(3);
+				if ( ((LA53_21 >= '0' && LA53_21 <= '9')) ) {
+					alt53=17;
 				}
 
 				else {
-					alt54=6;
+					alt53=6;
 				}
 
 				}
 				break;
 			case '3':
 				{
-				int LA54_22 = input.LA(3);
-				if ( ((LA54_22 >= '0' && LA54_22 <= '9')) ) {
-					alt54=17;
+				int LA53_22 = input.LA(3);
+				if ( ((LA53_22 >= '0' && LA53_22 <= '9')) ) {
+					alt53=17;
 				}
 
 				else {
-					alt54=7;
+					alt53=7;
 				}
 
 				}
@@ -2800,7 +2782,7 @@ public class gcodeLexer extends Lexer {
 			case '7':
 			case '8':
 				{
-				alt54=17;
+				alt53=17;
 				}
 				break;
 			default:
@@ -2808,7 +2790,7 @@ public class gcodeLexer extends Lexer {
 				try {
 					input.consume();
 					NoViableAltException nvae =
-						new NoViableAltException("", 54, 4, input);
+						new NoViableAltException("", 53, 4, input);
 					throw nvae;
 				} finally {
 					input.rewind(nvaeMark);
@@ -2819,80 +2801,80 @@ public class gcodeLexer extends Lexer {
 		case 'X':
 		case 'x':
 			{
-			alt54=18;
+			alt53=18;
 			}
 			break;
 		case 'Y':
 		case 'y':
 			{
-			alt54=19;
+			alt53=19;
 			}
 			break;
 		case 'Z':
 		case 'z':
 			{
-			alt54=20;
+			alt53=20;
 			}
 			break;
 		case 'I':
 		case 'i':
 			{
-			alt54=21;
+			alt53=21;
 			}
 			break;
 		case 'J':
 		case 'j':
 			{
-			alt54=22;
+			alt53=22;
 			}
 			break;
 		case 'K':
 		case 'k':
 			{
-			alt54=23;
+			alt53=23;
 			}
 			break;
 		case 'M':
 		case 'm':
 			{
-			alt54=24;
+			alt53=24;
 			}
 			break;
 		case 'S':
 		case 's':
 			{
-			alt54=25;
+			alt53=25;
 			}
 			break;
 		case 'E':
 		case 'e':
 			{
-			alt54=26;
+			alt53=26;
 			}
 			break;
 		case 'F':
 		case 'f':
 			{
-			alt54=27;
+			alt53=27;
 			}
 			break;
 		case 'T':
 		case 't':
 			{
-			alt54=28;
+			alt53=28;
 			}
 			break;
 		case '<':
 			{
-			alt54=29;
+			alt53=29;
 			}
 			break;
 		default:
 			NoViableAltException nvae =
-				new NoViableAltException("", 54, 0, input);
+				new NoViableAltException("", 53, 0, input);
 			throw nvae;
 		}
-		switch (alt54) {
+		switch (alt53) {
 			case 1 :
 				// C:\\Users\\mikyg\\Google Drive\\Progetto Linguaggi\\Code\\ANTWorks\\gcode.g:1:10: COMMENT
 				{
@@ -3101,28 +3083,28 @@ public class gcodeLexer extends Lexer {
 	}
 
 
-	protected DFA47 dfa47 = new DFA47(this);
-	static final String DFA47_eotS =
+	protected DFA46 dfa46 = new DFA46(this);
+	static final String DFA46_eotS =
 		"\2\uffff\1\34\1\36\1\40\1\42\1\44\1\52\4\uffff\1\34\1\36\1\40\1\42\1\44"+
 		"\1\52\3\uffff\1\65\1\66\1\67\1\70\1\71\1\72\1\73\3\uffff\1\74\1\uffff"+
 		"\1\75\1\uffff\1\76\1\uffff\1\77\1\102\1\103\1\110\1\111\1\uffff\1\22\1"+
 		"\23\1\24\1\112\1\113\1\114\1\115\34\uffff";
-	static final String DFA47_eofS =
+	static final String DFA46_eofS =
 		"\116\uffff";
-	static final String DFA47_minS =
+	static final String DFA46_minS =
 		"\22\60\3\uffff\7\60\3\uffff\1\60\1\uffff\1\60\1\uffff\1\60\1\uffff\5\60"+
 		"\1\uffff\7\60\34\uffff";
-	static final String DFA47_maxS =
+	static final String DFA46_maxS =
 		"\22\71\3\uffff\7\71\3\uffff\1\71\1\uffff\1\71\1\uffff\1\71\1\uffff\5\71"+
 		"\1\uffff\7\71\34\uffff";
-	static final String DFA47_acceptS =
+	static final String DFA46_acceptS =
 		"\22\uffff\1\13\1\14\1\15\7\uffff\1\5\1\46\1\6\1\uffff\1\7\1\uffff\1\10"+
 		"\1\uffff\1\11\5\uffff\1\12\7\uffff\1\16\1\17\1\20\1\21\1\22\1\23\1\24"+
 		"\1\25\1\26\1\27\1\30\1\31\1\32\1\33\1\34\1\35\1\36\1\37\1\40\1\41\1\42"+
 		"\1\43\1\44\1\45\1\1\1\2\1\3\1\4";
-	static final String DFA47_specialS =
+	static final String DFA46_specialS =
 		"\116\uffff}>";
-	static final String[] DFA47_transitionS = {
+	static final String[] DFA46_transitionS = {
 			"\1\1\1\10\1\11\1\12\1\2\1\3\1\4\1\5\1\6\1\7",
 			"\1\13\1\22\1\23\1\24\1\14\1\15\1\16\1\17\1\20\1\21",
 			"\3\35\1\25\1\26\1\27\1\30\1\31\1\32\1\33",
@@ -3203,38 +3185,38 @@ public class gcodeLexer extends Lexer {
 			""
 	};
 
-	static final short[] DFA47_eot = DFA.unpackEncodedString(DFA47_eotS);
-	static final short[] DFA47_eof = DFA.unpackEncodedString(DFA47_eofS);
-	static final char[] DFA47_min = DFA.unpackEncodedStringToUnsignedChars(DFA47_minS);
-	static final char[] DFA47_max = DFA.unpackEncodedStringToUnsignedChars(DFA47_maxS);
-	static final short[] DFA47_accept = DFA.unpackEncodedString(DFA47_acceptS);
-	static final short[] DFA47_special = DFA.unpackEncodedString(DFA47_specialS);
-	static final short[][] DFA47_transition;
+	static final short[] DFA46_eot = DFA.unpackEncodedString(DFA46_eotS);
+	static final short[] DFA46_eof = DFA.unpackEncodedString(DFA46_eofS);
+	static final char[] DFA46_min = DFA.unpackEncodedStringToUnsignedChars(DFA46_minS);
+	static final char[] DFA46_max = DFA.unpackEncodedStringToUnsignedChars(DFA46_maxS);
+	static final short[] DFA46_accept = DFA.unpackEncodedString(DFA46_acceptS);
+	static final short[] DFA46_special = DFA.unpackEncodedString(DFA46_specialS);
+	static final short[][] DFA46_transition;
 
 	static {
-		int numStates = DFA47_transitionS.length;
-		DFA47_transition = new short[numStates][];
+		int numStates = DFA46_transitionS.length;
+		DFA46_transition = new short[numStates][];
 		for (int i=0; i<numStates; i++) {
-			DFA47_transition[i] = DFA.unpackEncodedString(DFA47_transitionS[i]);
+			DFA46_transition[i] = DFA.unpackEncodedString(DFA46_transitionS[i]);
 		}
 	}
 
-	protected class DFA47 extends DFA {
+	protected class DFA46 extends DFA {
 
-		public DFA47(BaseRecognizer recognizer) {
+		public DFA46(BaseRecognizer recognizer) {
 			this.recognizer = recognizer;
-			this.decisionNumber = 47;
-			this.eot = DFA47_eot;
-			this.eof = DFA47_eof;
-			this.min = DFA47_min;
-			this.max = DFA47_max;
-			this.accept = DFA47_accept;
-			this.special = DFA47_special;
-			this.transition = DFA47_transition;
+			this.decisionNumber = 46;
+			this.eot = DFA46_eot;
+			this.eof = DFA46_eof;
+			this.min = DFA46_min;
+			this.max = DFA46_max;
+			this.accept = DFA46_accept;
+			this.special = DFA46_special;
+			this.transition = DFA46_transition;
 		}
 		@Override
 		public String getDescription() {
-			return "197:22: ( ( '0' ( '0' )+ '0' ) | ( '0' ( '0' )+ '1' ) | ( '0' ( '0' )+ '2' ) | ( '0' ( '0' )+ '3' ) | ( ( '0' )* '4' ) | ( ( '0' )* '5' ) | ( ( '0' )* '6' ) | ( ( '0' )* '7' ) | ( ( '0' )* '8' ) | ( ( '0' )* '9' ) | ( '0' )* '1' DIGIT | ( '0' )* '2' DIGIT | ( '0' )* '3' DIGIT | ( '0' )+ '40' | ( '0' )+ '41' | ( '0' )+ '42' | ( '0' )* '43' | ( '0' )* '44' | ( '0' )* '45' | ( '0' )* '46' | ( '0' )* '47' | ( '0' )* '48' | ( '0' )* '49' | ( '0' )* '5' DIGIT | ( '0' )* '6' DIGIT | ( '0' )* '7' DIGIT | ( '0' )* '8' DIGIT | ( '0' )+ '90' | ( '0' )+ '91' | ( '0' )* '92' | ( '0' )* '93' | ( '0' )+ '94' | ( '0' )+ '95' | ( '0' )+ '96' | ( '0' )+ '97' | ( '0' )* '98' | ( '0' )* '99' | D0GIT DIGIT ( DIGIT )+ )";
+			return "201:22: ( ( '0' ( '0' )+ '0' ) | ( '0' ( '0' )+ '1' ) | ( '0' ( '0' )+ '2' ) | ( '0' ( '0' )+ '3' ) | ( ( '0' )* '4' ) | ( ( '0' )* '5' ) | ( ( '0' )* '6' ) | ( ( '0' )* '7' ) | ( ( '0' )* '8' ) | ( ( '0' )* '9' ) | ( '0' )* '1' DIGIT | ( '0' )* '2' DIGIT | ( '0' )* '3' DIGIT | ( '0' )+ '40' | ( '0' )+ '41' | ( '0' )+ '42' | ( '0' )* '43' | ( '0' )* '44' | ( '0' )* '45' | ( '0' )* '46' | ( '0' )* '47' | ( '0' )* '48' | ( '0' )* '49' | ( '0' )* '5' DIGIT | ( '0' )* '6' DIGIT | ( '0' )* '7' DIGIT | ( '0' )* '8' DIGIT | ( '0' )+ '90' | ( '0' )+ '91' | ( '0' )* '92' | ( '0' )* '93' | ( '0' )+ '94' | ( '0' )+ '95' | ( '0' )+ '96' | ( '0' )+ '97' | ( '0' )* '98' | ( '0' )* '99' | D0GIT DIGIT ( DIGIT )+ )";
 		}
 	}
 

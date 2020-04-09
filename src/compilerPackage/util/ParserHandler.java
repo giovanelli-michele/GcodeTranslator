@@ -358,4 +358,9 @@ public class ParserHandler {
         }
     }
 
+    public void evaluateComment(Token comment) {
+        // valutare commento su singola riga dedicata
+        checkTranslationFormat();
+        translation.append("\t/* " + comment.getText().substring(1) + " */\n");
+    }
 }
