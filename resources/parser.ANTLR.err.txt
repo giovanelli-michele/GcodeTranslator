@@ -1,3 +1,0 @@
-1:*** SINTAX ERROR [1] in (17, 3) - Found F ('F3600') - no viable alternative at input 'F3600'
-2:*** SINTAX ERROR [1] in (17, 9) - Found X ('X139.816') - mismatched input 'X139.816' expecting EOL
-3:*** SINTAX ERROR [1] in (142, 20) - Found  ('<EOF>') - mismatched input '<EOF>' expecting EOL

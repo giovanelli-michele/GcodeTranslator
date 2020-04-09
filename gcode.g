@@ -275,5 +275,5 @@ D0GIT	:	('1'..'9');
 
 /* Numero decimale */
 fragment
-FLOAT	:	( '0' | D0GIT (DIGIT+)? ) ('.' DIGIT+)?;
+FLOAT	:	'-'? ( '0' | D0GIT (DIGIT+)? ) ('.' DIGIT+)?;
 
