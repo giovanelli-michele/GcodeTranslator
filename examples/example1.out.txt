@@ -1,0 +1,19 @@
+1)	Absolute programming
+	Change tool with the one at position 01 with default configuration
+2)	Tool radius compensation right
+3)	Speed rate value = 1000
+	Feed rate value  = 300
+	Tool clockwise rotation
+	Activate cooling lubrificant
+4)	Rapid positioning to [x=0.0, y=10.0, z=0.0]
+5)	Linear interpolation positioning to [x=0.0, y=50.0, z=0.0]
+6)	Linear interpolation positioning to [x=17.5, y=50.0, z=0.0]
+7)	Circular counterclockwise interpolation to [x=37.5, y=50.0, z=0.0] with center in [x=27.5, y=50.0]
+8)	Linear interpolation positioning to [x=50.0, y=50.0, z=0.0]
+9)	Linear interpolation positioning to [x=0.0, y=0.0, z=0.0]
+10)	Rapid positioning to [x=0.0, y=10.0, z=0.0]
+	Stop tool
+	Deactivate cooling lubrificant
+	End of Program
+	Final tool position: [x=0.0, y=10.0, z=0.0]
+	---------------------------------------------------------------------
